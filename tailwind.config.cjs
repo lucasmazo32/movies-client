@@ -16,7 +16,16 @@ module.exports = {
   },
   daisyui: {
     styled: true,
-    themes: ['night'],
+    themes: [
+      {
+        dark: {
+          ...require('daisyui/src/colors/themes')['[data-theme=dark]'],
+          primary: '#F1B569',
+          'primary-focus': '#ffab42',
+          'primary-content': '#2a303c',
+        },
+      },
+    ],
   },
   plugins: [require('daisyui')],
 }

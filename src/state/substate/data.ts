@@ -10,7 +10,7 @@ interface DataState {
 
 const initialState: DataState = {
   recommendation: mockRecommendations,
-  recommendationsFetched: true,
+  recommendationsFetched: false,
 }
 
 export const dataSlice = createSlice<DataState, {}, 'data'>({
