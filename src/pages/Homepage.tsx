@@ -1,12 +1,10 @@
-import { useRedirectToLoginWhenNecessary } from '@/hooks'
+import { ClientNav } from '@/features'
 import { FC } from 'react'
 
 const Homepage: FC = ({}) => {
-  useRedirectToLoginWhenNecessary()
-
   return (
-    <div>
-      Hello world!
+    <div className="max-w-7xl mx-auto">
+      <ClientNav />
     </div>
   )
 }
