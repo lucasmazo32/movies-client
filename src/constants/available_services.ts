@@ -1,0 +1,1 @@
+export type ServiceCode = 'hbo' | 'netflix' | 'disney' | 'prime'

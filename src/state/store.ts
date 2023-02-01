@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import userReducer from './substate/user'
+import dataReducer from './substate/data'
 
 const store = configureStore({
   reducer: {
     user: userReducer,
+    data: dataReducer,
   },
 })
 export type RootReducer = ReturnType<typeof store.getState>
