@@ -4,7 +4,6 @@ import { useCheckUserLoggedIn } from './hooks'
 
 function App() {
   useCheckUserLoggedIn()
-  console.log(import.meta.env)
 
   return (
     <RouterProvider router={router} />
