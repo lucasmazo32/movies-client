@@ -268,67 +268,6 @@ export const mockRecommendations: RecommendationModel = {
     },
     {
       available_countries: ['co'],
-      imdbID: 'tt4273800',
-      tmdbID: '541134',
-      imdbRating: 68,
-      imdbVoteCount: 56792,
-      tmdbRating: 69,
-      backdropPath: '/x2U0R60Z7hmJxZixzsGZfjFJbve.jpg',
-      backdropURLs: {
-        '1280':
-          'https://image.tmdb.org/t/p/w1280/x2U0R60Z7hmJxZixzsGZfjFJbve.jpg',
-        '300':
-          'https://image.tmdb.org/t/p/w300/x2U0R60Z7hmJxZixzsGZfjFJbve.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/x2U0R60Z7hmJxZixzsGZfjFJbve.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/x2U0R60Z7hmJxZixzsGZfjFJbve.jpg',
-      },
-      originalTitle: 'The Good Nurse',
-      genres: [1, 80, 18],
-      countries: ['US'],
-      year: 2022,
-      runtime: 121,
-      cast: [
-        'Jessica Chastain',
-        'Eddie Redmayne',
-        'Nnamdi Asomugha',
-        'Kim Dickens',
-        'Malik Yoba',
-        'Alix West Lefler',
-        'Noah Emmerich',
-      ],
-      significants: ['Tobias Lindholm'],
-      title: 'El ángel de la muerte',
-      overview:
-        'Sobrecargada de trabajo, una enfermera de la UCI se apoya en su nuevo y servicial compañero. Hasta que la muerte de una paciente empieza a hacerle sospechar de él.',
-      tagline: 'Basada en una increible historia real',
-      video: 'DiYvILPCz9c',
-      posterPath: '/InAsct1iw71Uspf5MPFx9AF133.jpg',
-      posterURLs: {
-        '154': 'https://image.tmdb.org/t/p/w154/InAsct1iw71Uspf5MPFx9AF133.jpg',
-        '185': 'https://image.tmdb.org/t/p/w185/InAsct1iw71Uspf5MPFx9AF133.jpg',
-        '342': 'https://image.tmdb.org/t/p/w342/InAsct1iw71Uspf5MPFx9AF133.jpg',
-        '500': 'https://image.tmdb.org/t/p/w500/InAsct1iw71Uspf5MPFx9AF133.jpg',
-        '780': 'https://image.tmdb.org/t/p/w780/InAsct1iw71Uspf5MPFx9AF133.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/InAsct1iw71Uspf5MPFx9AF133.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/InAsct1iw71Uspf5MPFx9AF133.jpg',
-      },
-      age: 15,
-      streamingInfo: {
-        netflix: {
-          co: {
-            added: 1668158125,
-            leaving: 0,
-            link: 'https://www.netflix.com/title/81260083/',
-          },
-        },
-      },
-      originalLanguage: 'en',
-    },
-    {
-      available_countries: ['co'],
       imdbID: 'tt8772262',
       tmdbID: '530385',
       imdbRating: 71,
