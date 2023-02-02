@@ -9,3 +9,25 @@ h2 {
 .client-input {
   @apply w-full text-lg bg-base-100 py-2 border-opacity-10 border-2 border-transparent border-b-base-content rounded-none outline-none;
 }
+
+/* Start of the carousel styles here */
+.carousel-btn {
+  @apply relative transition-all hover:scale-110 cursor-pointer;
+}
+
+.carousel-btn span {
+  @apply opacity-100 transition-all absolute left-0 right-0 bottom-4 text-center text-white font-bold;
+}
+
+.carousel-btn img {
+  @apply rounded transition-all border grayscale border-transparent;
+}
+
+.carousel-btn input:default ~ img {
+  @apply grayscale-0 border-primary;
+}
+
+.carousel-btn input:default ~ span {
+  @apply opacity-0;
+}
+/* End of the carousel styles here */
