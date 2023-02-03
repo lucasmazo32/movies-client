@@ -1,5 +1,4 @@
-import { ClientNav } from '@/features'
-import { HomeRecom } from '@/features/HomeRecommendations'
+import { ClientNav, HomeRecom } from '@/features'
 import { FC } from 'react'
 
 const Homepage: FC = ({}) => {
