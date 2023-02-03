@@ -1,7 +1,14 @@
 import { HBOButton, PrimeButton } from '@/components'
 import { ShowModel } from '@/models'
+import {
+  getShowDirectors,
+  getShowRuntime,
+  getShowYear,
+  getSlicedShowOverview,
+} from '@/utils'
 import { FC, memo } from 'react'
 import { Divider } from 'react-daisyui'
+import { useNavigate } from 'react-router-dom'
 import { HomeMainRecLink } from './HomeMainRecLink'
 
 export interface HomeMainRecProps {
@@ -9,13 +16,16 @@ export interface HomeMainRecProps {
 }
 
 export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
-  let overview = show.overview
-  if (overview.length > 400) {
-    overview = overview.slice(0, 400) + '...'
+  const navigate = useNavigate()
+  const handleBackdropClick = () => {
+    navigate(`/sh/${show.imdbId}`)
   }
   return (
     <div className="grid grid-cols-6">
-      <div className="relative col-start-1 col-end-5">
+      <div
+        className="relative col-start-1 col-end-5 hover:scale-105 transition-all cursor-pointer"
+        onClick={handleBackdropClick}
+      >
         <img
           className="rounded"
           src={show.backdropURLs.original}
@@ -37,25 +47,20 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
           </div>
           <div className="flex items-center gap-4 mt-3">
             <span className="font-semibold">Directores</span>
-            <span>
-              {(show.directors ?? show.creators ?? ['No info']).join(', ')}
-            </span>
+            <span>{getShowDirectors(show)}</span>
           </div>
         </div>
       </div>
       <div className="px-4 pt-4 col-start-5 col-end-7">
-        <span>{overview}</span>
+        <span>{getSlicedShowOverview(show)}</span>
         <Divider />
         <div className="flex items-center gap-4">
           <span className="font-semibold">Año</span>
-          <span>{show.year === 0 ? show.firstAirYear : show.year}</span>
+          <span>{getShowYear(show)}</span>
         </div>
         <div className="flex items-center gap-4">
           <span className="font-semibold">Duracion</span>
-          <span>
-            {show.runtime === 0 ? (show.episodeRuntimes?.at(0) ?? '40') : show.runtime}{' '}
-            minutos
-          </span>
+          <span>{getShowRuntime(show)} minutos</span>
         </div>
         <Divider />
         <HomeMainRecLink streamingInfo={show.streamingInfo} />
