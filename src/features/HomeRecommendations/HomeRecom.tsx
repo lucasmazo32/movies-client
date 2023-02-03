@@ -10,11 +10,11 @@ export const HomeRecom: FC = () => {
     return null
   }
 
-  const firstRecommendation = recommendations.movies[selected]
-  const otherRecommendations = recommendations.movies.slice(0, 5)
+  const firstRecommendation = recommendations.shows[selected]
+  const otherRecommendations = recommendations.shows.slice(0, 5)
   return (
     <div className="mt-6 rounded bg-base-200 p-4">
-      <HomeMainRec movie={firstRecommendation} />
+      <HomeMainRec show={firstRecommendation} />
       <HomeCarousel
         recommendations={otherRecommendations}
         selected={selected}

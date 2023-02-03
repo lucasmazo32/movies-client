@@ -1,8 +1,8 @@
-import { MovieModel } from '@/models'
+import { ShowModel } from '@/models'
 import { FC } from 'react'
 
 export interface HomeCarouselProps {
-  recommendations: MovieModel[]
+  recommendations: ShowModel[]
   selected: number
   handleSelect: (index: number) => void
 }
@@ -18,14 +18,14 @@ export const HomeCarousel: FC<HomeCarouselProps> = ({
         return (
           <label
             onClick={() => handleSelect(i)}
-            key={r.imdbID}
+            key={r.imdbId}
             className="carousel-btn"
           >
             <input
               type="radio"
               name="home-carousel"
               defaultChecked={i === selected}
-              id={`${r.imdbID}-radio`}
+              id={`${r.imdbId}-radio`}
               className="hidden"
             />
             <img
