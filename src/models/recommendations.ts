@@ -1,5 +1,5 @@
-import { MovieModel } from './movie'
+import { ShowModel } from './show'
 
 export interface RecommendationModel {
-  movies: Array<MovieModel>
+  shows: Array<ShowModel>
 }

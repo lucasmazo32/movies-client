@@ -1,402 +1,424 @@
 import { RecommendationModel } from '@/models'
 
 export const mockRecommendations: RecommendationModel = {
-  movies: [
+  shows: [
     {
-      available_countries: ['co'],
-      imdbID: 'tt1964418',
-      tmdbID: '158852',
-      imdbRating: 64,
-      imdbVoteCount: 184280,
-      tmdbRating: 62,
-      backdropPath: '/jZj6cGNWxggM5tA6hDxPAuqzv5I.jpg',
-      backdropURLs: {
-        '1280':
-          'https://image.tmdb.org/t/p/w1280/jZj6cGNWxggM5tA6hDxPAuqzv5I.jpg',
-        '300':
-          'https://image.tmdb.org/t/p/w300/jZj6cGNWxggM5tA6hDxPAuqzv5I.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/jZj6cGNWxggM5tA6hDxPAuqzv5I.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/jZj6cGNWxggM5tA6hDxPAuqzv5I.jpg',
-      },
-      originalTitle: 'Tomorrowland',
-      genres: [28, 12, 10751],
-      countries: ['US'],
-      year: 2015,
-      runtime: 130,
-      cast: [
-        'George Clooney',
-        'Hugh Laurie',
-        'Britt Robertson',
-        'Raffey Cassidy',
-        'Tim McGraw',
-        'Chris Bauer',
-        'Shiloh Nelson',
-      ],
-      significants: ['Brad Bird'],
-      title: 'Tomorrowland: El mundo del mañana',
+      availableCountries: ['co'],
+      type: 'series',
+      title: 'El juego del calamar',
       overview:
-        'Unidos por el mismo destino, una adolescente inteligente y optimista, llena de curiosidad científica, y un antiguo niño prodigio inventor, hastiado por las desilusiones, se embarcan en una peligrosa misión para desenterrar los secretos de un enigmático lugar localizado en algún lugar del tiempo y el espacio, conocido en la memoria colectiva como “Tomorrowland”, y así salvar a la humanidad.',
-      tagline: 'Imagina un lugar donde nada es imposible.',
-      video: 'cmur8KsP3ns',
-      posterPath: '/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-      posterURLs: {
-        '154':
-          'https://image.tmdb.org/t/p/w154/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-        '185':
-          'https://image.tmdb.org/t/p/w185/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-        '342':
-          'https://image.tmdb.org/t/p/w342/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-        '500':
-          'https://image.tmdb.org/t/p/w500/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/go6qA8ksn5gkXcDnW3WtMeqzAg8.jpg',
-      },
-      age: 9,
+        'Cientos de jugadores con problemas de dinero aceptan una invitación rarísima para competir en juegos infantiles. Dentro les esperan un tentador premio y desafíos letales.',
       streamingInfo: {
-        disney: {
-          co: {
-            added: 1607858204,
-            leaving: 0,
-            link: 'https://www.disneyplus.com/movies/-/F63qWBzMiX4V',
-          },
+        co: {
+          netflix: [
+            {
+              watchLink: '',
+              link: 'https://www.netflix.com/title/81040344/',
+              quality: '',
+            },
+          ],
         },
       },
-      originalLanguage: 'en',
-    },
-    {
-      available_countries: ['co'],
-      imdbID: 'tt10872600',
-      tmdbID: '634649',
-      imdbRating: 82,
-      imdbVoteCount: 762127,
-      tmdbRating: 80,
-      backdropPath: '/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg',
-      backdropURLs: {
-        '1280':
-          'https://image.tmdb.org/t/p/w1280/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg',
-        '300':
-          'https://image.tmdb.org/t/p/w300/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg',
-      },
-      originalTitle: 'Spider-Man: No Way Home',
-      genres: [28, 12, 14],
-      countries: ['US'],
-      year: 2021,
-      runtime: 148,
       cast: [
-        'Tom Holland',
-        'Zendaya',
-        'Benedict Cumberbatch',
-        'Jacob Batalon',
-        'Jon Favreau',
-        'Jamie Foxx',
-        'Willem Dafoe',
+        'Lee Jung-jae',
+        'Park Hae-soo',
+        'Jung Ho-yeon',
+        'Wi Ha-jun',
+        'Oh Young-soo',
+        'Heo Sung-tae',
+        'Kim Joo-ryoung',
       ],
-      significants: ['Jon Watts'],
-      title: 'Spider-Man: No Way Home',
-      overview:
-        'Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.',
-      tagline: 'El multiverso desatado.',
-      video: 'Df00ZNYEcAY',
-      posterPath: '/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-      posterURLs: {
-        '154':
-          'https://image.tmdb.org/t/p/w154/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-        '185':
-          'https://image.tmdb.org/t/p/w185/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-        '342':
-          'https://image.tmdb.org/t/p/w342/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-        '500':
-          'https://image.tmdb.org/t/p/w500/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/miZFgV81xG324rpUknQX8dtXuBl.jpg',
-      },
-      age: 11,
-      streamingInfo: {
-        hbo: {
-          co: {
-            added: 1658634911,
-            leaving: 16979507400,
-            link: 'https://play.hbomax.com/page/urn:hbo:page:GYqeASQeezEo8igEAAACK:type:feature',
-          },
-        },
-      },
-      originalLanguage: 'en',
-    },
-    {
-      available_countries: ['co'],
-      imdbID: 'tt1160419',
-      tmdbID: '438631',
+      year: 0,
+      firstAirYear: 2021,
+      lastAirYear: 2021,
+      advisedMinimumAudienceAge: 17,
+      imdbId: 'tt10919420',
       imdbRating: 80,
-      imdbVoteCount: 642554,
-      tmdbRating: 77,
-      backdropPath: '/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg',
+      imdbVoteCount: 448021,
+      tmdbId: 93405,
+      tmdbRating: 78,
+      originalTitle: '오징어 게임',
+      backdropPath: '/xYTnihl7qffiLSZ6yLMSpBkPdXC.jpg',
       backdropURLs: {
         '1280':
-          'https://image.tmdb.org/t/p/w1280/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg',
+          'https://image.tmdb.org/t/p/w1280/xYTnihl7qffiLSZ6yLMSpBkPdXC.jpg',
         '300':
-          'https://image.tmdb.org/t/p/w300/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg',
+          'https://image.tmdb.org/t/p/w300/xYTnihl7qffiLSZ6yLMSpBkPdXC.jpg',
         '780':
-          'https://image.tmdb.org/t/p/w780/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg',
+          'https://image.tmdb.org/t/p/w780/xYTnihl7qffiLSZ6yLMSpBkPdXC.jpg',
         original:
-          'https://image.tmdb.org/t/p/original/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg',
+          'https://image.tmdb.org/t/p/original/xYTnihl7qffiLSZ6yLMSpBkPdXC.jpg',
       },
-      originalTitle: 'Dune',
-      genres: [28, 12],
-      countries: ['US'],
-      year: 2021,
-      runtime: 155,
-      cast: [
-        'Timothée Chalamet',
-        'Rebecca Ferguson',
-        'Oscar Isaac',
-        'Josh Brolin',
-        'Stellan Skarsgård',
-        'Dave Bautista',
-        'Sharon Duncan-Brewster',
-      ],
-      significants: ['Denis Villeneuve'],
-      title: 'Dune',
-      overview:
-        'En un lejano futuro, la galaxia conocida es gobernada mediante un sistema feudal de casas nobles bajo el mandato del Emperador. Las alianzas y la política giran entorno a un pequeño planeta, Dune,  del que extrae la "especia melange", la materia prima que permite los viajes espaciales. La Casa Atreides, bajo el mandato del Duque Leto Atreides recibe el encargo de custodiar el planeta, relevando en la encomienda a sus históricos enemigos, los Harkonnen. Paul Atreides, hijo del duque, se verá atrapado en las intrigas políticas mientras descubre el destino que le deparan los desiertos de Dune.',
-      tagline: 'Más allá del miedo, el destino espera.',
-      video: 'kPjOcWHVNGo',
-      posterPath: '/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-      posterURLs: {
-        '154':
-          'https://image.tmdb.org/t/p/w154/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-        '185':
-          'https://image.tmdb.org/t/p/w185/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-        '342':
-          'https://image.tmdb.org/t/p/w342/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-        '500':
-          'https://image.tmdb.org/t/p/w500/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/qf5bntGx2p5kQKO7zUbHrbOx9pp.jpg',
-      },
-      age: 11,
-      streamingInfo: {
-        hbo: {
-          co: {
-            added: 1655500625,
-            leaving: 17089235400,
-            link: 'https://play.hbomax.com/page/urn:hbo:page:GYUjdLgBiJp5otAEAAAAJ:type:feature',
-          },
+      genres: [
+        {
+          id: 28,
+          name: 'Action',
         },
-      },
-      originalLanguage: 'en',
-    },
-    {
-      available_countries: ['co'],
-      imdbID: 'tt15340724',
-      tmdbID: '851644',
-      imdbRating: 73,
-      imdbVoteCount: 4383,
-      tmdbRating: 84,
-      backdropPath: '/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg',
-      backdropURLs: {
-        '1280':
-          'https://image.tmdb.org/t/p/w1280/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg',
-        '300':
-          'https://image.tmdb.org/t/p/w300/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/rl7Jw8PjhSIjArOlDNv0JQPL1ZV.jpg',
-      },
-      originalTitle: '20세기 소녀',
-      genres: [18, 10749],
-      countries: ['KR'],
-      year: 2022,
-      runtime: 119,
-      cast: [
-        'Kim You-jung',
-        'Byeon Woo-seok',
-        'Park Jung-woo',
-        'Roh Yoon-seo',
-        'Kim Sung-kyung',
-        'Jeong Seok-yong',
-        'Yoon Yi-reh',
-      ],
-      significants: ['Bang Woo-ri'],
-      title: 'Una chica del siglo XX',
-      overview:
-        'Yeon-du le pide a su mejor amiga Bora que recopile toda la información que pueda sobre Baek Hyun-jin mientras ella está en los Estados Unidos para someterse a una cirugía de corazón. Bora decide acercarse primero al mejor amigo de Baek, Pung Woon-ho. Sin embargo, el torpe plan de Bora se desarrolla en una dirección inesperada. En 1999, un año antes del nuevo siglo, Bora, que cumple diecisiete años, cae en la fiebre del primer amor.',
-      tagline: '',
-      video: 'VN5zhenkAaA',
-      posterPath: '/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-      posterURLs: {
-        '154':
-          'https://image.tmdb.org/t/p/w154/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-        '185':
-          'https://image.tmdb.org/t/p/w185/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-        '342':
-          'https://image.tmdb.org/t/p/w342/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-        '500':
-          'https://image.tmdb.org/t/p/w500/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/4kU4QFgExCgybhcKv1mzZ0vuND6.jpg',
-      },
-      age: 10,
-      streamingInfo: {
-        netflix: {
-          co: {
-            added: 1671005397,
-            leaving: 0,
-            link: 'https://www.netflix.com/title/81472752/',
-          },
+        {
+          id: 18,
+          name: 'Drama',
         },
-      },
+        {
+          id: 9648,
+          name: 'Mystery',
+        },
+      ],
       originalLanguage: 'ko',
-    },
-    {
-      available_countries: ['co'],
-      imdbID: 'tt8772262',
-      tmdbID: '530385',
-      imdbRating: 71,
-      imdbVoteCount: 327032,
-      tmdbRating: 71,
-      backdropPath: '/aAM3cQmYGjjLQ24m0F0RWfjKQ57.jpg',
-      backdropURLs: {
-        '1280':
-          'https://image.tmdb.org/t/p/w1280/aAM3cQmYGjjLQ24m0F0RWfjKQ57.jpg',
-        '300':
-          'https://image.tmdb.org/t/p/w300/aAM3cQmYGjjLQ24m0F0RWfjKQ57.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/aAM3cQmYGjjLQ24m0F0RWfjKQ57.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/aAM3cQmYGjjLQ24m0F0RWfjKQ57.jpg',
-      },
-      originalTitle: 'Midsommar',
-      genres: [18, 27, 9648],
-      countries: ['SE', 'US'],
-      year: 2019,
-      runtime: 147,
-      cast: [
-        'Florence Pugh',
-        'Jack Reynor',
-        'William Jackson Harper',
-        'Will Poulter',
-        'Vilhelm Blomgren',
-        'Isabelle Grill',
-        'Gunnel Fred',
-      ],
-      significants: ['Ari Aster'],
-      title: 'Midsommar',
-      overview:
-        'Una pareja estadounidense que no está pasando por su mejor momento acude con unos amigos a un festival de verano que se celebra cada noventa años en una aldea remota de Suecia. Lo que comienza como unas vacaciones de ensueño en un lugar en el que el sol no se pone nunca, poco a poco se convierte en una oscura pesadilla cuando los misteriosos aldeanos les invitan a participar en sus perturbadoras actividades festivas.',
-      tagline: 'Que comiencen las festividades.',
-      video: '3LPZ4agE75Y',
-      posterPath: '/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+      countries: ['KR'],
+      directors: null,
+      creators: ['Hwang Dong-hyuk'],
+      seasonCount: 2,
+      episodeCount: 9,
+      episodeRuntimes: [54],
+      runtime: 0,
+      youtubeTrailerVideoId: 'Mj4_xG5NXeo',
+      youtubeTrailerVideoLink: 'https://www.youtube.com/watch?v=Mj4_xG5NXeo',
+      posterPath: '/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
       posterURLs: {
         '154':
-          'https://image.tmdb.org/t/p/w154/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+          'https://image.tmdb.org/t/p/w154/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
         '185':
-          'https://image.tmdb.org/t/p/w185/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+          'https://image.tmdb.org/t/p/w185/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
         '342':
-          'https://image.tmdb.org/t/p/w342/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+          'https://image.tmdb.org/t/p/w342/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
         '500':
-          'https://image.tmdb.org/t/p/w500/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+          'https://image.tmdb.org/t/p/w500/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
         '780':
-          'https://image.tmdb.org/t/p/w780/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+          'https://image.tmdb.org/t/p/w780/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
         original:
-          'https://image.tmdb.org/t/p/original/km0ta4N96yjoZPVy5A3gbcE3Ne8.jpg',
+          'https://image.tmdb.org/t/p/original/yvW9VuHiwfAaTNYjALROI8evNIT.jpg',
       },
-      age: 18,
-      streamingInfo: {
-        netflix: {
-          co: {
-            added: 1653744250,
-            leaving: 0,
-            link: 'https://www.netflix.com/title/81071055/',
-          },
-        },
-      },
-      originalLanguage: 'en',
+      tagline: 'Juegos, premios y desafios letales...',
     },
     {
-      available_countries: ['co'],
-      imdbID: 'tt22938576',
-      tmdbID: '1006917',
+      availableCountries: ['co'],
+      type: 'series',
+      title: 'Amor con fianza: Destino Cerdeña',
+      overview:
+        'Un nuevo grupo de parejas (presuntamente) estables ponen a prueba sus relaciones. En su búsqueda de dinero y amor, ¿les hará daño la verdad o servirá para reforzarlas?',
+      streamingInfo: {
+        co: {
+          netflix: [
+            {
+              watchLink: 'https://www.netflix.com/watch/81642255',
+              link: 'https://www.netflix.com/title/81642255/',
+              quality: 'hd',
+            },
+          ],
+        },
+      },
+      cast: [],
+      year: 0,
+      firstAirYear: 2022,
+      lastAirYear: 2022,
+      advisedMinimumAudienceAge: 16,
+      imdbId: 'tt22941150',
       imdbRating: 53,
-      imdbVoteCount: 1689,
-      tmdbRating: 60,
-      backdropPath: '/hUrdrIfLwxFjx8UjwlAg28PiMDN.jpg',
+      imdbVoteCount: 72,
+      tmdbId: 214302,
+      tmdbRating: 76,
+      originalTitle: 'Amor con fianza: Destino Cerdeña',
+      backdropPath: '/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
       backdropURLs: {
         '1280':
-          'https://image.tmdb.org/t/p/w1280/hUrdrIfLwxFjx8UjwlAg28PiMDN.jpg',
+          'https://image.tmdb.org/t/p/w1280/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
         '300':
-          'https://image.tmdb.org/t/p/w300/hUrdrIfLwxFjx8UjwlAg28PiMDN.jpg',
+          'https://image.tmdb.org/t/p/w300/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
         '780':
-          'https://image.tmdb.org/t/p/w780/hUrdrIfLwxFjx8UjwlAg28PiMDN.jpg',
+          'https://image.tmdb.org/t/p/w780/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
         original:
-          'https://image.tmdb.org/t/p/original/hUrdrIfLwxFjx8UjwlAg28PiMDN.jpg',
+          'https://image.tmdb.org/t/p/original/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
       },
-      originalTitle: 'Le Patient',
-      genres: [18, 9648, 53],
-      countries: ['FR'],
-      year: 2022,
-      runtime: 93,
-      cast: [
-        'Txomin Vergez',
-        'Clotilde Hesme',
-        'Audrey Dana',
-        'Stéphane Rideau',
-        'Rebecca Williams',
-        'Matthieu Lucci',
-        'Alex Lawther',
+      genres: [
+        {
+          id: 10764,
+          name: 'Reality',
+        },
       ],
-      significants: ['Christophe Charrier'],
-      title: 'El paciente',
-      overview:
-        'Tras despertar de un coma, lo único que quiere Thomas es averiguar qué le pasó a su familia. Pero la verdad es muchas veces tan sombría como la mente humana…',
-      tagline: '',
-      video: '',
-      posterPath: '/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+      originalLanguage: 'es',
+      countries: ['ES'],
+      directors: null,
+      creators: [],
+      seasonCount: 1,
+      episodeCount: 8,
+      episodeRuntimes: [],
+      runtime: 0,
+      youtubeTrailerVideoId: '',
+      youtubeTrailerVideoLink: '',
+      posterPath: '/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
       posterURLs: {
         '154':
-          'https://image.tmdb.org/t/p/w154/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+          'https://image.tmdb.org/t/p/w154/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
         '185':
-          'https://image.tmdb.org/t/p/w185/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+          'https://image.tmdb.org/t/p/w185/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
         '342':
-          'https://image.tmdb.org/t/p/w342/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+          'https://image.tmdb.org/t/p/w342/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
         '500':
-          'https://image.tmdb.org/t/p/w500/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+          'https://image.tmdb.org/t/p/w500/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
         '780':
-          'https://image.tmdb.org/t/p/w780/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+          'https://image.tmdb.org/t/p/w780/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
         original:
-          'https://image.tmdb.org/t/p/original/9uTx9dGdLtT4N6CumP32YSc1LqN.jpg',
+          'https://image.tmdb.org/t/p/original/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
       },
-      age: 16,
+      tagline: '',
+    },
+    {
+      availableCountries: ['co'],
+      type: 'series',
+      title: 'Yo soy Betty, la fea',
+      overview:
+        "'Yo soy Betty, la fea' es una telenovela colombiana que se estrenó en septiembre de 1999 en su país de origen, con Ana María Orozco y Jorge Enrique Abello como actores protagonistas en los papeles de Beatriz y Armando. La producción contaba la historia de Betty, una joven y brillante economista que acaba fichando en una empresa de moda para el jefe de la compañía, de quien acaba enamorándose. Una situación que Armando acaba aprovechando a su favor pero que, contra todo pronóstico, acaba volviéndose en su contra al corresponder a los sentimientos de su secretaria.\n\nCreada por Fernando Gaitán Salom, esta telenovela cosechó un éxito arrollador no solo en Colombia, sino también a nivel internacional, al alcanzar más de 180 países y ser doblada a unos 25 idiomas. Además, fue origen de múltiples versiones que fueron surgiendo tras su enorme fama, sumando hasta 28 adaptaciones en todo el mundo hasta el año 2010.",
       streamingInfo: {
-        netflix: {
-          co: {
-            added: 1670418963,
-            leaving: 0,
-            link: 'https://www.netflix.com/title/81521006/',
-          },
+        co: {
+          prime: [
+            {
+              watchLink: '',
+              link: 'https://www.primevideo.com/detail/0N8WNLWPTPTLE1UY02RTMBMZEL/ref=atv_dp',
+              quality: 'sd',
+            },
+          ],
         },
       },
-      originalLanguage: 'fr',
+      cast: [
+        'Ana María Orozco',
+        'Jorge E. Abello',
+        'Lorna Paz',
+        'Natalia Ramírez',
+        'Luis Mesa',
+        'Scarlet Ortiz',
+        'Ricardo Vélez',
+      ],
+      year: 0,
+      firstAirYear: 1999,
+      lastAirYear: 2001,
+      advisedMinimumAudienceAge: 6,
+      imdbId: 'tt0233127',
+      imdbRating: 83,
+      imdbVoteCount: 3355,
+      tmdbId: 16286,
+      tmdbRating: 83,
+      originalTitle: 'Yo soy Betty, la fea',
+      backdropPath: '/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+      backdropURLs: {
+        '1280':
+          'https://image.tmdb.org/t/p/w1280/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+        '300':
+          'https://image.tmdb.org/t/p/w300/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+      },
+      genres: [
+        {
+          id: 35,
+          name: 'Comedy',
+        },
+        {
+          id: 18,
+          name: 'Drama',
+        },
+      ],
+      originalLanguage: 'es',
+      countries: ['CO'],
+      directors: null,
+      creators: ['Fernando Gaitán'],
+      seasonCount: 1,
+      episodeCount: 335,
+      episodeRuntimes: [30],
+      runtime: 0,
+      youtubeTrailerVideoId: '',
+      youtubeTrailerVideoLink: '',
+      posterPath: '/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+      posterURLs: {
+        '154':
+          'https://image.tmdb.org/t/p/w154/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+        '185':
+          'https://image.tmdb.org/t/p/w185/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+        '342':
+          'https://image.tmdb.org/t/p/w342/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+        '500':
+          'https://image.tmdb.org/t/p/w500/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+      },
+      tagline: '',
+    },
+    {
+      availableCountries: ['co'],
+      type: 'movie',
+      title: 'La chica salvaje',
+      overview:
+        'La historia de Kya, una niña abandonada que se crió hasta la edad adulta en los peligrosos pantanos de Carolina del Norte. Atraída por dos jóvenes de la ciudad, Kya se abre a un mundo nuevo y sorprendente; pero cuando uno de ellos es encontrado muerto, la comunidad inmediatamente la señala como la principal sospechosa.',
+      streamingInfo: {
+        co: {
+          hbo: [
+            {
+              watchLink:
+                'https://play.hbomax.com/feature/urn:hbo:feature:GY0oj9g84pJSYugEAAAEu',
+              link: 'https://play.hbomax.com/page/urn:hbo:page:GY0oj9g84pJSYugEAAAEu:type:feature',
+              quality: 'hd',
+            },
+          ],
+        },
+      },
+      cast: [
+        'Daisy Edgar-Jones',
+        'Taylor John Smith',
+        'Harris Dickinson',
+        'Michael Hyatt',
+        'Sterling Macer Jr.',
+        'David Strathairn',
+        'Garret Dillahunt',
+      ],
+      year: 2022,
+      firstAirYear: null,
+      lastAirYear: null,
+      advisedMinimumAudienceAge: 12,
+      imdbId: 'tt9411972',
+      imdbRating: 71,
+      imdbVoteCount: 78280,
+      tmdbId: 682507,
+      tmdbRating: 76,
+      originalTitle: 'Where the Crawdads Sing',
+      backdropPath: '/4js6A53tpvUbCEcUsKwuetRnVGb.jpg',
+      backdropURLs: {
+        '1280':
+          'https://image.tmdb.org/t/p/w1280/4js6A53tpvUbCEcUsKwuetRnVGb.jpg',
+        '300':
+          'https://image.tmdb.org/t/p/w300/4js6A53tpvUbCEcUsKwuetRnVGb.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/4js6A53tpvUbCEcUsKwuetRnVGb.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/4js6A53tpvUbCEcUsKwuetRnVGb.jpg',
+      },
+      genres: [
+        {
+          id: 18,
+          name: 'Drama',
+        },
+        {
+          id: 9648,
+          name: 'Mystery',
+        },
+      ],
+      originalLanguage: 'en',
+      countries: ['US'],
+      directors: ['Olivia Newman'],
+      creators: null,
+      seasonCount: 0,
+      episodeCount: 0,
+      episodeRuntimes: null,
+      runtime: 125,
+      youtubeTrailerVideoId: 'r-Z81ioszp0',
+      youtubeTrailerVideoLink: 'https://www.youtube.com/watch?v=r-Z81ioszp0',
+      posterPath: '/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+      posterURLs: {
+        '154':
+          'https://image.tmdb.org/t/p/w154/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+        '185':
+          'https://image.tmdb.org/t/p/w185/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+        '342':
+          'https://image.tmdb.org/t/p/w342/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+        '500':
+          'https://image.tmdb.org/t/p/w500/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/zuAQbLrYLlRvz5fTzU9rMJwRXCp.jpg',
+      },
+      tagline: 'Los secretos están enterrados justo bajo la superficie.',
+    },
+    {
+      availableCountries: ['co'],
+      type: 'series',
+      title: '1899',
+      overview:
+        'Al cruzar el océano del viejo al nuevo continente, varios inmigrantes de diversas nacionalidades viven una pesadilla a bordo de un segundo barco a la deriva.',
+      streamingInfo: {
+        co: {
+          netflix: [
+            {
+              watchLink: '',
+              link: 'https://www.netflix.com/title/80214497/',
+              quality: '',
+            },
+          ],
+        },
+      },
+      cast: [
+        'Emily Beecham',
+        'Andreas Pietschmann',
+        'Aneurin Barnard',
+        'Isabella Wei',
+        'Maciej Musiał',
+        'Yann Gael',
+        'Miguel Bernardeau',
+      ],
+      year: 0,
+      firstAirYear: 2022,
+      lastAirYear: 2022,
+      advisedMinimumAudienceAge: 17,
+      imdbId: 'tt9319668',
+      imdbRating: 74,
+      imdbVoteCount: 85192,
+      tmdbId: 90669,
+      tmdbRating: 77,
+      originalTitle: '1899',
+      backdropPath: '/s1xnjbOIQtwGObPnydTebp74G2c.jpg',
+      backdropURLs: {
+        '1280':
+          'https://image.tmdb.org/t/p/w1280/s1xnjbOIQtwGObPnydTebp74G2c.jpg',
+        '300':
+          'https://image.tmdb.org/t/p/w300/s1xnjbOIQtwGObPnydTebp74G2c.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/s1xnjbOIQtwGObPnydTebp74G2c.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/s1xnjbOIQtwGObPnydTebp74G2c.jpg',
+      },
+      genres: [
+        {
+          id: 18,
+          name: 'Drama',
+        },
+        {
+          id: 9648,
+          name: 'Mystery',
+        },
+      ],
+      originalLanguage: 'de',
+      countries: ['DE'],
+      directors: null,
+      creators: ['Baran bo Odar', 'Jantje Friese'],
+      seasonCount: 1,
+      episodeCount: 8,
+      episodeRuntimes: [50],
+      runtime: 0,
+      youtubeTrailerVideoId: 'nHtsu0l5S_c',
+      youtubeTrailerVideoLink: 'https://www.youtube.com/watch?v=nHtsu0l5S_c',
+      posterPath: '/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+      posterURLs: {
+        '154':
+          'https://image.tmdb.org/t/p/w154/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+        '185':
+          'https://image.tmdb.org/t/p/w185/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+        '342':
+          'https://image.tmdb.org/t/p/w342/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+        '500':
+          'https://image.tmdb.org/t/p/w500/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/8KGvYHQNOamON6ufQGjyhkiVn1V.jpg',
+      },
+      tagline: 'Lo que está perdido será encontrado.',
     },
   ],
 }
