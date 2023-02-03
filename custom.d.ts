@@ -9,6 +9,8 @@ interface ImportMetaEnv {
   readonly VITE_MESSAGING_SENDER_ID: string
   readonly VITE_APP_ID: string
   readonly VITE_MESSUREMENT_ID: string
+  readonly VITE_ALGOLIA_APP_ID: string
+  readonly VITE_ALGOLIA_API_KEY: string
 }
 
 interface ImportMeta {

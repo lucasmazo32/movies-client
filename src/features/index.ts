@@ -1,4 +1,5 @@
 export * from './ClientNav'
 export * from './HomeRecommendations'
 export * from './LoginFields'
+export * from './Search'
 export * from './ShowPage'

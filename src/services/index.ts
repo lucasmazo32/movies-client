@@ -1,2 +1,3 @@
-export * from './http'
+export * from './algolia'
 export * from './api'
+export * from './http'
