@@ -3,6 +3,7 @@ import { Button, Navbar } from 'react-daisyui'
 import { ReactComponent as LogoIcon } from '@/assets/logo/logo.svg'
 import { ClientNavUserLogin } from './ClientNavUserLogin'
 import { useNavigate } from 'react-router-dom'
+import { Search } from '../Search'
 
 export const ClientNav: FC = () => {
   const navigator = useNavigate()
@@ -19,7 +20,10 @@ export const ClientNav: FC = () => {
       >
         <LogoIcon className="fill-primary" />
       </Button>
-      <ClientNavUserLogin />
+      <div className="flex gap-4">
+        <Search />
+        <ClientNavUserLogin />
+      </div>
     </Navbar>
   )
 }

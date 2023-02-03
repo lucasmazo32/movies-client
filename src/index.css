@@ -40,3 +40,27 @@ h1 {
   -webkit-mask-image: -webkit-gradient(linear, top, bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 60vh);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 60vh);
 }
+
+.ais-SearchBox {
+  @apply relative;
+}
+
+.ais-SearchBox input {
+  @apply input input-primary w-full;
+}
+
+.ais-SearchBox-submit {
+  @apply hidden;
+}
+
+.ais-SearchBox-reset {
+  @apply hidden;
+}
+
+.ais-Hits {
+  @apply menu;
+}
+
+.ais-Hits a {
+  @apply font-medium rounded text-gray-300 hover:bg-primary hover:text-primary-content transition-all;
+}
