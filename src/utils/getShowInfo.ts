@@ -35,3 +35,7 @@ export const getShowLinks = (show: ShowModel) => {
 export const getActors = (show: ShowModel) => {
   return show.cast.join(', ')
 }
+
+export const getShowDirectors = (show: ShowModel) => {
+  return (show.directors ?? show.creators ?? ['No info']).join(', ')
+}

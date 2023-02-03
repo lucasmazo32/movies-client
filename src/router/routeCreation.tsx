@@ -16,7 +16,7 @@ const pagesName: PageName[] = [
   },
   {
     Element: lazy<FC>(async () => await import('@/pages/Show')),
-    path: '/sh/:imdb_id'
+    path: '/sh/:imdb_id',
   },
 ]
 
