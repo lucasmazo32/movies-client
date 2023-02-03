@@ -14,6 +14,10 @@ const pagesName: PageName[] = [
     Element: lazy<FC>(async () => await import('@/pages/Login')),
     path: '/login',
   },
+  {
+    Element: lazy<FC>(async () => await import('@/pages/Show')),
+    path: '/sh/:imdb_id'
+  },
 ]
 
 export const pages: RouteObject[] = pagesName.map((p) => {

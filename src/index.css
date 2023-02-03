@@ -6,6 +6,10 @@ h2 {
   @apply text-4xl font-bold;
 }
 
+h1 {
+  @apply text-7xl font-bold;
+}
+
 .client-input {
   @apply w-full text-lg bg-base-100 py-2 border-opacity-10 border-2 border-transparent border-b-base-content rounded-none outline-none;
 }
@@ -31,3 +35,8 @@ h2 {
   @apply opacity-0;
 }
 /* End of the carousel styles here */
+
+.image-opacity-gradient {
+  -webkit-mask-image: -webkit-gradient(linear, top, bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 60vh);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 60vh);
+}
