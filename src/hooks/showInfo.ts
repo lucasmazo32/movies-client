@@ -1,14 +1,21 @@
 import { ShowModel } from "@/models"
+import { fetchShowByIdThunk } from "@/state/thunk"
+import { useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { useAppSelector } from "./redux"
+import { useAppDispatch, useAppSelector } from "./redux"
 
-export const useGetShowInfo = (): ShowModel | undefined => {
+export const useGetShowInfo = (): ShowModel | false | undefined => {
   const params = useParams()
   const imdbId = params['imdb_id']
   const shows = useAppSelector(state => state.data.shows)
-  const show: ShowModel | undefined = shows[imdbId as keyof typeof shows]
+  const show: ShowModel | false | undefined = shows[imdbId as keyof typeof shows]
+  const dispatch = useAppDispatch()
 
-  if (show) {
-    return show
-  }
+  useEffect(() => {
+    if (show === undefined) {
+      dispatch(fetchShowByIdThunk(imdbId ?? ''))
+    }
+  }, [show])
+
+  return show
 }
