@@ -8,13 +8,13 @@ export const ClientNavUser: FC<ClientNavUserProps> = ({}) => {
     <div className="dropdown dropdown-hover dropdown-end">
       <label
         tabIndex={0}
-        className="btn btn-primary btn-circle"
+        className="btn btn-primary btn-circle sm:btn-md btn-sm"
       >
         <UserIcon className="h-5 w-5" />
       </label>
       <ul
         tabIndex={0}
-        className="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-52"
+        className="dropdown-content menu sm:menu-normal menu-compact p-2 shadow bg-base-300 rounded-box sm:w-52 w-32"
       >
         <li>
           <a>Logout</a>

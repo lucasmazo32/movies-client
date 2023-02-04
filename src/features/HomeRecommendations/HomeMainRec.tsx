@@ -21,7 +21,7 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
     navigate(`/sh/${show.imdbId}`)
   }
   return (
-    <div className="grid grid-cols-6">
+    <div className="lg:grid grid-cols-6">
       <div
         className="relative col-start-1 col-end-5 hover:scale-105 transition-all cursor-pointer"
         onClick={handleBackdropClick}
@@ -30,15 +30,15 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
           className="rounded"
           src={show.backdropURLs.original}
         />
-        <div className="absolute rounded-tr p-4 bottom-0 bg-base-200 bg-opacity-80">
+        <div className="sm:absolute rounded-tr sm:p-4 pt-4 bottom-0 sm:bg-base-200 bg-opacity-80">
           <h2>{show.title}</h2>
-          <div className="flex items-center gap-4 mt-3">
+          <div className="flex items-center sm:gap-4 gap-1 mt-3">
             <span className="font-semibold">Géneros</span>
             {show.genres.map((genre) => {
               return (
                 <span
                   key={genre.name}
-                  className="badge px-4 py-3"
+                  className="badge sm:px-4 sm:py-3"
                 >
                   {genre.name}
                 </span>
@@ -51,9 +51,9 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
           </div>
         </div>
       </div>
-      <div className="px-4 pt-4 col-start-5 col-end-7">
-        <span>{getSlicedShowOverview(show)}</span>
-        <Divider />
+      <div className="flex sm:flex-col flex-col-reverse px-0 pt-4 col-start-5 col-end-7">
+        <span className="sm:block hidden">{getSlicedShowOverview(show)}</span>
+        <Divider className="sm:block hidden" />
         <div className="flex items-center gap-4">
           <span className="font-semibold">Año</span>
           <span>{getShowYear(show)}</span>
@@ -63,6 +63,8 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
           <span>{getShowRuntime(show)} minutos</span>
         </div>
         <Divider />
+        <span className="sm:hidden">{getSlicedShowOverview(show)}</span>
+        <Divider className="sm:hidden" />
         <HomeMainRecLink streamingInfo={show.streamingInfo} />
       </div>
     </div>

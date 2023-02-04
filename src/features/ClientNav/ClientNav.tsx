@@ -16,9 +16,10 @@ export const ClientNav: FC = () => {
     <Navbar className="justify-between relative z-40">
       <Button
         onClick={handleLogoClick}
-        className="bg-base-100 hover:bg-base-100 border-transparent hover:border-transparent"
+        color="primary"
+        className="btn-square sm:btn-md btn-sm"
       >
-        <LogoIcon className="fill-primary" />
+        <LogoIcon className="fill-base-100" />
       </Button>
       <div className="flex gap-4">
         <Search />

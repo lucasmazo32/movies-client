@@ -13,7 +13,7 @@ export const HomeCarousel: FC<HomeCarouselProps> = ({
   handleSelect,
 }) => {
   return (
-    <div className="mt-8 gap-4 grid grid-cols-5">
+    <div className="sm:gap-4 gap-1 grid grid-cols-5">
       {recommendations.map((r, i) => {
         return (
           <label

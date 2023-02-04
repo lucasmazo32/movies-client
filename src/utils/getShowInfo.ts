@@ -11,7 +11,7 @@ export const getShowYear = (show: ShowModel): number => {
 
 export const getSlicedShowOverview = (
   show: ShowModel,
-  length: number = 500,
+  length: number = 200,
 ): string => {
   if (show.overview.length < length) {
     return show.overview
