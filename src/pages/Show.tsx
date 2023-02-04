@@ -22,7 +22,7 @@ const Show: FC = () => {
     <>
       <img
         src={show.backdropURLs.original}
-        className="absolute w-full top-0 left-0 right-0 z-0 image-opacity-gradient"
+        className="h-screen object-cover absolute w-full top-0 left-0 right-0 z-0 image-opacity-gradient"
       />
       <div className="max-w-7xl px-4 mx-auto relative h-screen">
         <ClientNav />

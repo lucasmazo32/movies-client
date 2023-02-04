@@ -93,161 +93,189 @@ export const mockRecommendations: RecommendationModel = {
     },
     {
       availableCountries: ['co'],
-      type: 'series',
-      title: 'Amor con fianza: Destino Cerdeña',
+      type: 'movie',
+      title: 'Aguas Profundas',
       overview:
-        'Un nuevo grupo de parejas (presuntamente) estables ponen a prueba sus relaciones. En su búsqueda de dinero y amor, ¿les hará daño la verdad o servirá para reforzarlas?',
-      streamingInfo: {
-        co: {
-          netflix: [
-            {
-              watchLink: 'https://www.netflix.com/watch/81642255',
-              link: 'https://www.netflix.com/title/81642255/',
-              quality: 'hd',
-            },
-          ],
-        },
-      },
-      cast: [],
-      year: 0,
-      firstAirYear: 2022,
-      lastAirYear: 2022,
-      advisedMinimumAudienceAge: 16,
-      imdbId: 'tt22941150',
-      imdbRating: 53,
-      imdbVoteCount: 72,
-      tmdbId: 214302,
-      tmdbRating: 76,
-      originalTitle: 'Amor con fianza: Destino Cerdeña',
-      backdropPath: '/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
-      backdropURLs: {
-        '1280':
-          'https://image.tmdb.org/t/p/w1280/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
-        '300':
-          'https://image.tmdb.org/t/p/w300/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/dK1K4jekZqv1a4ntcotfbPe1lCu.jpg',
-      },
-      genres: [
-        {
-          id: 10764,
-          name: 'Reality',
-        },
-      ],
-      originalLanguage: 'es',
-      countries: ['ES'],
-      directors: null,
-      creators: [],
-      seasonCount: 1,
-      episodeCount: 8,
-      episodeRuntimes: [],
-      runtime: 0,
-      youtubeTrailerVideoId: '',
-      youtubeTrailerVideoLink: '',
-      posterPath: '/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-      posterURLs: {
-        '154':
-          'https://image.tmdb.org/t/p/w154/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-        '185':
-          'https://image.tmdb.org/t/p/w185/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-        '342':
-          'https://image.tmdb.org/t/p/w342/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-        '500':
-          'https://image.tmdb.org/t/p/w500/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-        '780':
-          'https://image.tmdb.org/t/p/w780/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-        original:
-          'https://image.tmdb.org/t/p/original/nyJJSdRH1NOqGBN5odRRvTZoF2B.jpg',
-      },
-      tagline: '',
-    },
-    {
-      availableCountries: ['co'],
-      type: 'series',
-      title: 'Yo soy Betty, la fea',
-      overview:
-        "'Yo soy Betty, la fea' es una telenovela colombiana que se estrenó en septiembre de 1999 en su país de origen, con Ana María Orozco y Jorge Enrique Abello como actores protagonistas en los papeles de Beatriz y Armando. La producción contaba la historia de Betty, una joven y brillante economista que acaba fichando en una empresa de moda para el jefe de la compañía, de quien acaba enamorándose. Una situación que Armando acaba aprovechando a su favor pero que, contra todo pronóstico, acaba volviéndose en su contra al corresponder a los sentimientos de su secretaria.\n\nCreada por Fernando Gaitán Salom, esta telenovela cosechó un éxito arrollador no solo en Colombia, sino también a nivel internacional, al alcanzar más de 180 países y ser doblada a unos 25 idiomas. Además, fue origen de múltiples versiones que fueron surgiendo tras su enorme fama, sumando hasta 28 adaptaciones en todo el mundo hasta el año 2010.",
+        'Un marido adinerado, que permite que su esposa tenga relaciones extramatrimoniales para evitar el divorcio, se convierte en el principal sospechoso de la desaparición de los amantes de ella... Adaptación de la novela de Patricia Highsmith.',
       streamingInfo: {
         co: {
           prime: [
             {
               watchLink: '',
-              link: 'https://www.primevideo.com/detail/0N8WNLWPTPTLE1UY02RTMBMZEL/ref=atv_dp',
+              link: 'https://www.primevideo.com/detail/0IPCFB1VGQSHWUE57P5FB7CJBJ/ref=atv_dp',
+              quality: 'uhd',
+            },
+          ],
+        },
+      },
+      cast: [
+        'Ben Affleck',
+        'Ana de Armas',
+        'Tracy Letts',
+        'Lil Rel Howery',
+        'Dash Mihok',
+        'Finn Wittrock',
+        'Kristen Connolly',
+      ],
+      year: 2022,
+      firstAirYear: null,
+      lastAirYear: null,
+      advisedMinimumAudienceAge: 17,
+      imdbId: 'tt2180339',
+      imdbRating: 54,
+      imdbVoteCount: 47985,
+      tmdbId: 619979,
+      tmdbRating: 57,
+      originalTitle: 'Deep Water',
+      backdropPath: '/lcITbesmy0IBO6TXTAgQHJE6Asx.jpg',
+      backdropURLs: {
+        '1280':
+          'https://image.tmdb.org/t/p/w1280/lcITbesmy0IBO6TXTAgQHJE6Asx.jpg',
+        '300':
+          'https://image.tmdb.org/t/p/w300/lcITbesmy0IBO6TXTAgQHJE6Asx.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/lcITbesmy0IBO6TXTAgQHJE6Asx.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/lcITbesmy0IBO6TXTAgQHJE6Asx.jpg',
+      },
+      genres: [
+        {
+          id: 18,
+          name: 'Drama',
+        },
+        {
+          id: 9648,
+          name: 'Mystery',
+        },
+        {
+          id: 53,
+          name: 'Thriller',
+        },
+      ],
+      originalLanguage: 'en',
+      countries: ['US'],
+      directors: ['Adrian Lyne'],
+      creators: null,
+      seasonCount: 0,
+      episodeCount: 0,
+      episodeRuntimes: null,
+      runtime: 116,
+      youtubeTrailerVideoId: 'yERv9roVKn0',
+      youtubeTrailerVideoLink: 'https://www.youtube.com/watch?v=yERv9roVKn0',
+      posterPath: '/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+      posterURLs: {
+        '154':
+          'https://image.tmdb.org/t/p/w154/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+        '185':
+          'https://image.tmdb.org/t/p/w185/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+        '342':
+          'https://image.tmdb.org/t/p/w342/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+        '500':
+          'https://image.tmdb.org/t/p/w500/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+        '780':
+          'https://image.tmdb.org/t/p/w780/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+        original:
+          'https://image.tmdb.org/t/p/original/aarAi6bp8Cl3RYXy2lpeLc1hGS7.jpg',
+      },
+      tagline: 'La historia de amor nunca es la historia completa.',
+    },
+    {
+      availableCountries: ['co'],
+      type: 'movie',
+      title: 'La viuda',
+      overview:
+        'Frances es una dulce e ingenua joven que, tras la muerte de su madre, se muda a Manhattan. Cuando encuentra en el metro un bolso extraviado, decide entregárselo a su legítima dueña, Greta, una pianista viuda con una desesperada necesidad de compañía. Rápidamente se convierten en amigas, pero su amistad cambia cuando se descubren las siniestras intenciones de Greta.',
+      streamingInfo: {
+        co: {
+          apple: [
+            {
+              watchLink: '',
+              link: 'https://tv.apple.com/co/movie/la-viuda/umc.cmc.7h7pnlkpzise01qjfwm5yfqd1',
+              quality: 'hd',
+            },
+            {
+              watchLink: '',
+              link: 'https://tv.apple.com/co/movie/la-viuda/umc.cmc.7h7pnlkpzise01qjfwm5yfqd1',
+              quality: 'hd',
+            },
+          ],
+          prime: [
+            {
+              watchLink: '',
+              link: 'https://www.primevideo.com/detail/0FSFR8N4L09UFVTUBRQTK8P92L/ref=atv_dp',
               quality: 'sd',
             },
           ],
         },
       },
       cast: [
-        'Ana María Orozco',
-        'Jorge E. Abello',
-        'Lorna Paz',
-        'Natalia Ramírez',
-        'Luis Mesa',
-        'Scarlet Ortiz',
-        'Ricardo Vélez',
+        'Chloë Grace Moretz',
+        'Isabelle Huppert',
+        'Maika Monroe',
+        'Colm Feore',
+        'Stephen Rea',
+        'Zawe Ashton',
+        'Jeff Hiller',
       ],
-      year: 0,
-      firstAirYear: 1999,
-      lastAirYear: 2001,
-      advisedMinimumAudienceAge: 6,
-      imdbId: 'tt0233127',
-      imdbRating: 83,
-      imdbVoteCount: 3355,
-      tmdbId: 16286,
-      tmdbRating: 83,
-      originalTitle: 'Yo soy Betty, la fea',
-      backdropPath: '/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+      year: 2018,
+      firstAirYear: null,
+      lastAirYear: null,
+      advisedMinimumAudienceAge: 15,
+      imdbId: 'tt2639336',
+      imdbRating: 60,
+      imdbVoteCount: 34836,
+      tmdbId: 471506,
+      tmdbRating: 65,
+      originalTitle: 'Greta',
+      backdropPath: '/6CmaRROvzd0IURIUOz967ZG7ltb.jpg',
       backdropURLs: {
         '1280':
-          'https://image.tmdb.org/t/p/w1280/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+          'https://image.tmdb.org/t/p/w1280/6CmaRROvzd0IURIUOz967ZG7ltb.jpg',
         '300':
-          'https://image.tmdb.org/t/p/w300/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+          'https://image.tmdb.org/t/p/w300/6CmaRROvzd0IURIUOz967ZG7ltb.jpg',
         '780':
-          'https://image.tmdb.org/t/p/w780/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+          'https://image.tmdb.org/t/p/w780/6CmaRROvzd0IURIUOz967ZG7ltb.jpg',
         original:
-          'https://image.tmdb.org/t/p/original/gYUgaCLjMB9gDNNod3R0OJp5pDQ.jpg',
+          'https://image.tmdb.org/t/p/original/6CmaRROvzd0IURIUOz967ZG7ltb.jpg',
       },
       genres: [
         {
-          id: 35,
-          name: 'Comedy',
+          id: 9648,
+          name: 'Mystery',
         },
         {
-          id: 18,
-          name: 'Drama',
+          id: 53,
+          name: 'Thriller',
         },
       ],
-      originalLanguage: 'es',
-      countries: ['CO'],
-      directors: null,
-      creators: ['Fernando Gaitán'],
-      seasonCount: 1,
-      episodeCount: 335,
-      episodeRuntimes: [30],
-      runtime: 0,
-      youtubeTrailerVideoId: '',
-      youtubeTrailerVideoLink: '',
-      posterPath: '/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+      originalLanguage: 'en',
+      countries: ['HK', 'IE', 'KR', 'US'],
+      directors: ['Neil Jordan'],
+      creators: null,
+      seasonCount: 0,
+      episodeCount: 0,
+      episodeRuntimes: null,
+      runtime: 98,
+      youtubeTrailerVideoId: '9sLHK4ccHGQ',
+      youtubeTrailerVideoLink: 'https://www.youtube.com/watch?v=9sLHK4ccHGQ',
+      posterPath: '/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
       posterURLs: {
         '154':
-          'https://image.tmdb.org/t/p/w154/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+          'https://image.tmdb.org/t/p/w154/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
         '185':
-          'https://image.tmdb.org/t/p/w185/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+          'https://image.tmdb.org/t/p/w185/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
         '342':
-          'https://image.tmdb.org/t/p/w342/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+          'https://image.tmdb.org/t/p/w342/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
         '500':
-          'https://image.tmdb.org/t/p/w500/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+          'https://image.tmdb.org/t/p/w500/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
         '780':
-          'https://image.tmdb.org/t/p/w780/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
-        '92': 'https://image.tmdb.org/t/p/w92/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+          'https://image.tmdb.org/t/p/w780/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
+        '92': 'https://image.tmdb.org/t/p/w92/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
         original:
-          'https://image.tmdb.org/t/p/original/iEBOiXiDGaxVR6w8aKgG5MEusuO.jpg',
+          'https://image.tmdb.org/t/p/original/vsNUxeOiRDyS3FDJMroRcJOcjXm.jpg',
       },
-      tagline: '',
+      tagline: 'Su juego acaba de comenzar.',
     },
     {
       availableCountries: ['co'],

@@ -51,7 +51,7 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
           </div>
         </div>
       </div>
-      <div className="flex sm:flex-col flex-col-reverse px-0 pt-4 col-start-5 col-end-7">
+      <div className="flex sm:flex-col flex-col-reverse sm:px-4 px-0 pt-4 col-start-5 col-end-7">
         <span className="sm:block hidden">{getSlicedShowOverview(show)}</span>
         <Divider className="sm:block hidden" />
         <div className="flex items-center gap-4">

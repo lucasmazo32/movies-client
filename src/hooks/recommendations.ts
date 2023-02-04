@@ -8,8 +8,8 @@ export const useGetRecommendations = () => {
   const recommendations = useAppSelector((state) => state.data.recommendation)
 
   useEffect(() => {
-    if (user && !recommendations) {
-      dispatch(fetchRecommendationsThunk(user.uid))
+    if (!recommendations) {
+      dispatch(fetchRecommendationsThunk(user?.uid ?? 'default'))
     }
-  }, [])
+  }, [user])
 }

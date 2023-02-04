@@ -7,21 +7,23 @@ import {
   getSlicedShowOverview,
   numToHM,
 } from '@/utils'
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import { ShowPageBtn } from './ShowPageBtn'
 
 export interface ShowPageProps {
   show: ShowModel
 }
 
-export const ShowPage: FC<ShowPageProps> = ({ show }) => {
+export const ShowPage: FC<ShowPageProps> = memo(({ show }) => {
   return (
     <div className="sm:absolute sm:px-4 sm:mt-0 mt-[40vw] grid grid-cols-5 gap-8 bottom-0 left-0 right-0 sm:pb-40 text-gray-100 w-full">
       <section className="sm:col-span-3 col-span-5 flex flex-col gap-4">
         <h1>{show.title}</h1>
         <div className="flex items-center gap-2">
           <StarIcon className="h-4 fill-primary" />
-          <span className="text-lg font-bold">{(show.imdbRating / 10).toFixed(1)}</span>
+          <span className="text-lg font-bold">
+            {(show.imdbRating / 10).toFixed(1)}
+          </span>
           <span className="h-4 w-[1px] bg-gray-100" />
           <span>{show.imdbVoteCount}</span>
         </div>
@@ -43,4 +45,6 @@ export const ShowPage: FC<ShowPageProps> = ({ show }) => {
       </section>
     </div>
   )
-}
+})
+
+ShowPage.displayName = 'ShowPage'
