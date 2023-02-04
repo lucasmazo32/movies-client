@@ -50,7 +50,7 @@ export const Search: FC<SearchProps> = ({}) => {
           >
             <Configure hitsPerPage={4} />
             <SearchBox
-              searchAsYouType={false}
+              searchAsYouType={true}
               translations={{
                 placeholder: 'Busca aquí...',
               }}

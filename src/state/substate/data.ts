@@ -1,11 +1,11 @@
 import { RecommendationModel, ShowModel } from '@/models'
 import { mockRecommendations } from '@/_mock'
 import { createSlice } from '@reduxjs/toolkit'
-import { fetchRecommendationsThunk } from '../thunk'
+import { fetchRecommendationsThunk, fetchShowByIdThunk } from '../thunk'
 
 interface DataState {
   recommendation?: RecommendationModel
-  shows: Record<string, ShowModel>
+  shows: Record<string, ShowModel | false>
   recommendationsFetched: boolean
 }
 
@@ -35,6 +35,12 @@ export const dataSlice = createSlice<DataState, {}, 'data'>({
       })
       .addCase(fetchRecommendationsThunk.rejected, (state, _) => {
         state.recommendationsFetched = true
+      })
+      .addCase(fetchShowByIdThunk.fulfilled, (state, action) => {
+        state.shows[action.payload.imdbId] = action.payload
+      })
+      .addCase(fetchShowByIdThunk.rejected, (state, action) => {
+        state.shows[action.error.message ?? ''] = false
       }),
 })
 

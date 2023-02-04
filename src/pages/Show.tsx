@@ -1,4 +1,5 @@
-import { ClientNav, ShowPage } from '@/features'
+import { Skeleton } from '@/components'
+import { ClientNav, ShowPage, ShowPageSkeleton } from '@/features'
 import { useGetShowInfo } from '@/hooks'
 import { FC } from 'react'
 
@@ -6,6 +7,15 @@ const Show: FC = () => {
   const show = useGetShowInfo()
 
   if (show === undefined) {
+    return (
+      <div className="max-w-7xl mx-auto relative h-screen">
+        <ClientNav />
+        <ShowPageSkeleton />
+      </div>
+    )
+  }
+
+  if (show === false) {
     return null
   }
 

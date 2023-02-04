@@ -1,1 +1,2 @@
-export * from './servicesIcons'
+export * from './Skeleton'
+export * from './ServicesIcons'
