@@ -19,8 +19,9 @@ export const ClientNavUserLogin: FC = () => {
     <Button
       onClick={handleClick}
       color="primary"
+      className="sm:btn-md btn-sm"
     >
-      Login
+      Ingresar
     </Button>
   )
 }
