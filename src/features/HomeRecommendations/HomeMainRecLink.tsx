@@ -25,7 +25,12 @@ const mapServiceToButton: Record<
 export const HomeMainRecLink: FC<HomeMainRecLinkProps> = ({
   streamingInfo,
 }) => {
-  const services = Object.keys(streamingInfo.co) as ServiceCode[]
+  const services = Object.keys(streamingInfo.co).filter((v) => [
+    'netflix',
+    'prime',
+    'disney',
+    'hbo',
+  ].includes(v)) as ServiceCode[]
   return (
     <div className="flex">
       {services.map((s) => {

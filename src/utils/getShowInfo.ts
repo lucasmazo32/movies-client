@@ -1,4 +1,4 @@
-import { ServiceCode } from '@/constants'
+import { ServiceCode, servicesArray } from '@/constants'
 import { ShowModel } from '@/models'
 
 export const getShowRuntime = (show: ShowModel): number => {
@@ -21,15 +21,19 @@ export const getSlicedShowOverview = (
 }
 
 export const getShowLinks = (show: ShowModel) => {
-  return Object.entries(show.streamingInfo.co).map((v) => {
-    const streamService = v[0] as ServiceCode
-    const info = v[1][0]
-    const link = info.watchLink ? info.watchLink : info.link
-    return {
-      streamService,
-      link,
+  const ans: { streamService: ServiceCode; link: string }[] = []
+  Object.entries(show.streamingInfo.co).forEach((v) => {
+    if (servicesArray.includes(v[0] as ServiceCode)) {
+      const streamService = v[0] as ServiceCode
+      const info = v[1][0]
+      const link = info.watchLink ? info.watchLink : info.link
+      ans.push({
+        streamService,
+        link,
+      })
     }
   })
+  return ans
 }
 
 export const getActors = (show: ShowModel) => {

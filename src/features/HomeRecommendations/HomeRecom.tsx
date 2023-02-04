@@ -2,12 +2,13 @@ import { useAppSelector, useHomepageCarousel } from '@/hooks'
 import { FC } from 'react'
 import { HomeCarousel } from './HomeCarousel'
 import { HomeMainRec } from './HomeMainRec'
+import { HomeRecomSkeleton } from './HomeRecomSkeleton'
 
 export const HomeRecom: FC = () => {
   const recommendations = useAppSelector((state) => state.data.recommendation)
   const { selected, handleSelect } = useHomepageCarousel(4)
   if (!recommendations) {
-    return null
+    return <HomeRecomSkeleton />
   }
 
   const firstRecommendation = recommendations.shows[selected]

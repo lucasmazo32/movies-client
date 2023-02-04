@@ -10,13 +10,7 @@ interface DataState {
 }
 
 const initialState: DataState = {
-  recommendation: mockRecommendations,
-  shows: {
-    ...mockRecommendations.shows.reduce((result, show) => {
-      result[show.imdbId] = show
-      return result
-    }, {} as Record<string, ShowModel>),
-  },
+  shows: {},
   recommendationsFetched: false,
 }
 
