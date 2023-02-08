@@ -25,7 +25,7 @@ export const Search: FC<SearchProps> = ({}) => {
   return (
     <>
       <label
-        className="btn btn-primary btn-circle sm:btn-md btn-sm"
+        className="btn btn-primary btn-circle btn-sm"
         htmlFor="search-modal"
       >
         <SearchIcon className="w-4 h4" />
