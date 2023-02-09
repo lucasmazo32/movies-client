@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { Button, Navbar } from 'react-daisyui'
 import { ReactComponent as LogoIcon } from '@/assets/logo/logo.svg'
+import { ReactComponent as HomeIcon } from '@/assets/icons/home.svg'
+import { ReactComponent as LikedIcon } from '@/assets/icons/liked.svg'
 import { ClientNavUserLogin } from './ClientNavUserLogin'
 import { useNavigate } from 'react-router-dom'
 import { Search } from '../Search'
@@ -12,15 +14,37 @@ export const ClientNav: FC = () => {
     navigator('/')
   }
 
+  const handleLikeClick = () => {
+    navigator('/likes')
+  }
+
   return (
     <Navbar className="justify-between relative z-40">
-      <Button
-        onClick={handleLogoClick}
-        color="primary"
-        className="btn-square sm:btn-md btn-sm"
-      >
-        <LogoIcon className="fill-base-100" />
-      </Button>
+      <div className="flex gap-4">
+        <Button
+          onClick={handleLogoClick}
+          color="primary"
+          className="btn-square sm:btn-md btn-sm"
+        >
+          <LogoIcon className="fill-base-100" />
+        </Button>
+        <Button
+          shape="square"
+          size="sm"
+          color="primary"
+          onClick={handleLogoClick}
+        >
+          <HomeIcon className="w-4" />
+        </Button>
+        <Button
+          shape="square"
+          size="sm"
+          color="primary"
+          onClick={handleLikeClick}
+        >
+          <LikedIcon className="w-4" />
+        </Button>
+      </div>
       <div className="flex gap-4">
         <Search />
         <ClientNavUserLogin />

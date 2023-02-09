@@ -15,6 +15,10 @@ const pagesName: PageName[] = [
     path: '/login',
   },
   {
+    Element: lazy<FC>(async () => await import('@/pages/Likes')),
+    path: '/likes',
+  },
+  {
     Element: lazy<FC>(async () => await import('@/pages/Show')),
     path: '/sh/:imdb_id',
   },
