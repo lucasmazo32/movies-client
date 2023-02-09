@@ -4,12 +4,12 @@ import { useAppDispatch, useAppSelector } from './redux'
 
 export const useGetRecommendations = () => {
   const dispatch = useAppDispatch()
-  const user = useAppSelector((state) => state.user.userInfo)
+  const uid = useAppSelector((state) => state.user.userInfo)?.uid
   const recommendations = useAppSelector((state) => state.data.recommendation)
 
   useEffect(() => {
     if (!recommendations) {
-      dispatch(fetchRecommendationsThunk(user?.uid ?? 'default'))
+      dispatch(fetchRecommendationsThunk(uid ?? 'default'))
     }
-  }, [user])
+  }, [uid])
 }

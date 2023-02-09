@@ -62,16 +62,18 @@ export const LikeShow: FC = () => {
             >
               ¿Qué tanto quieres ver el título?
             </option>
-            {watchDesireRate.map((v, i) => {
-              return (
-                <option
-                  key={i}
-                  value={i}
-                >
-                  {v}
-                </option>
-              )
-            })}
+            {Object.entries(watchDesireRate)
+              .sort((a, b) => parseInt(b[0]) - parseInt(a[0]))
+              .map((v) => {
+                return (
+                  <option
+                    key={v[0]}
+                    value={v[0]}
+                  >
+                    {v[1]}
+                  </option>
+                )
+              })}
           </select>
           <div className="grid py-4 grid-cols-2 gap-4 justify-between">
             <Button

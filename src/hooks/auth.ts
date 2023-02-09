@@ -39,7 +39,7 @@ export const useCheckUserLoggedIn = () => {
         dispatch(updateUser(null))
       }
     })
-  })
+  }, [])
 }
 
 export const useRedirectToLoginWhenNecessary = () => {
