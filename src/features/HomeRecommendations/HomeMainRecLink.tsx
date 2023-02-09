@@ -5,11 +5,12 @@ import {
   PrimeButton,
 } from '@/components'
 import { ServiceCode } from '@/constants'
-import { StreamingInfoMondel } from '@/models'
+import { ShowModel } from '@/models'
 import { FC, HTMLAttributes } from 'react'
+import { LikeButton } from '../LikeShow'
 
 export interface HomeMainRecLinkProps {
-  streamingInfo: StreamingInfoMondel
+  show: ShowModel
 }
 
 const mapServiceToButton: Record<
@@ -22,19 +23,14 @@ const mapServiceToButton: Record<
   hbo: HBOButton,
 }
 
-export const HomeMainRecLink: FC<HomeMainRecLinkProps> = ({
-  streamingInfo,
-}) => {
-  const services = Object.keys(streamingInfo.co).filter((v) => [
-    'netflix',
-    'prime',
-    'disney',
-    'hbo',
-  ].includes(v)) as ServiceCode[]
+export const HomeMainRecLink: FC<HomeMainRecLinkProps> = ({ show }) => {
+  const services = Object.keys(show.streamingInfo.co).filter((v) =>
+    ['netflix', 'prime', 'disney', 'hbo'].includes(v),
+  ) as ServiceCode[]
   return (
-    <div className="flex">
+    <div className="flex gap-4">
       {services.map((s) => {
-        const inf = streamingInfo.co[s][0]
+        const inf = show.streamingInfo.co[s][0]
         const handleClick = () => {
           if (inf.watchLink) {
             window.open(inf.watchLink, '_blank')
@@ -50,6 +46,7 @@ export const HomeMainRecLink: FC<HomeMainRecLinkProps> = ({
           />
         )
       })}
+      <LikeButton imdbId={show.imdbId} />
     </div>
   )
 }
