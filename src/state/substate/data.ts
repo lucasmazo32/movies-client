@@ -1,12 +1,12 @@
 import { RecommendationModel, ShowModel } from '@/models'
-import { mockRecommendations } from '@/_mock'
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit'
 import { fetchRecommendationsThunk, fetchShowByIdThunk } from '../thunk'
 
 interface DataState {
   recommendation?: RecommendationModel
   shows: Record<string, ShowModel | false>
   recommendationsFetched: boolean
+  possibleShow?: string
 }
 
 const initialState: DataState = {
@@ -14,10 +14,21 @@ const initialState: DataState = {
   recommendationsFetched: false,
 }
 
-export const dataSlice = createSlice<DataState, {}, 'data'>({
+interface DataReducers extends SliceCaseReducers<DataState> {
+  updatePossibleShow: (
+    state: DataState,
+    payload: PayloadAction<string | undefined>,
+  ) => void
+}
+
+export const dataSlice = createSlice<DataState, DataReducers, 'data'>({
   name: 'data',
   initialState,
-  reducers: {},
+  reducers: {
+    updatePossibleShow: (state, action) => {
+      state.possibleShow = action.payload
+    },
+  },
   extraReducers: (build) =>
     build
       .addCase(fetchRecommendationsThunk.fulfilled, (state, action) => {
@@ -38,6 +49,6 @@ export const dataSlice = createSlice<DataState, {}, 'data'>({
       }),
 })
 
-export const {} = dataSlice.actions
+export const { updatePossibleShow } = dataSlice.actions
 
 export default dataSlice.reducer

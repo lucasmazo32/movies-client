@@ -65,7 +65,7 @@ export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
         <Divider />
         <span className="sm:hidden">{getSlicedShowOverview(show)}</span>
         <Divider className="sm:hidden" />
-        <HomeMainRecLink streamingInfo={show.streamingInfo} />
+        <HomeMainRecLink show={show} />
       </div>
     </div>
   )
