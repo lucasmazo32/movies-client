@@ -19,7 +19,7 @@ module.exports = {
     themes: [
       {
         dark: {
-          ...require('daisyui/src/colors/themes')['[data-theme=dark]'],
+          ...require('daisyui/src/colors/themes')['[data-theme=dracula]'],
           primary: '#F1B569',
           'primary-focus': '#ffab42',
           'primary-content': '#2a303c',

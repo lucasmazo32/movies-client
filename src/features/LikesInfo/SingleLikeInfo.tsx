@@ -2,19 +2,27 @@ import { ReactComponent as StarIcon } from '@/assets/icons/star.svg'
 import { watchDesireRate } from '@/constants'
 import { LikeModel } from '@/models'
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export interface SingleLikeInfoProps {
   like: LikeModel
 }
 
 export const SingleLikeInfo: FC<SingleLikeInfoProps> = ({ like }) => {
+  const navigator = useNavigate()
+  const handleClick = () => {
+    navigator(`/sh/${like.imdbId}`)
+  }
   return (
-    <div className="card card-compact card-side bg-base-200 h-60">
-      <figure>
+    <div
+      onClick={handleClick}
+      className="card card-compact card-side bg-base-200 h-60 cursor-pointer hover:scale-105 transition-all"
+    >
+      <figure className="w-32">
         <img
           src={like.posterUrl}
           alt={`${like.showName} image`}
-          className="h-full"
+          className="h-auto w-40 object-cover"
         />
       </figure>
       <div className="card-body">
