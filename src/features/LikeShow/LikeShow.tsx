@@ -1,5 +1,5 @@
 import { watchDesireRate } from '@/constants'
-import { useAppDispatch, useAppSelector } from '@/hooks'
+import { useAddLikeForShow, useAppDispatch, useAppSelector } from '@/hooks'
 import { ShowModel } from '@/models'
 import { updatePossibleShow } from '@/state'
 import { ChangeEventHandler, FC, useEffect, useState } from 'react'
@@ -11,15 +11,25 @@ export const LikeShow: FC = () => {
   const possibleLikeShow = useAppSelector((state) => state.data.possibleShow)
   const shows = useAppSelector((state) => state.data.shows)
   const show = shows[possibleLikeShow as keyof typeof shows]
+  const { handleAddLikeClick, loading } = useAddLikeForShow()
   const dispatch = useAppDispatch()
+
+  const addDisabled = isNaN(parseInt(selected))
 
   const handleSelect: ChangeEventHandler<HTMLSelectElement> = (e) => {
     setSelected(e.target.value)
   }
-
   const handleClose = () => {
     setSelected('undefined')
     dispatch(updatePossibleShow(undefined))
+  }
+  const handleAddClick = async () => {
+    if (show) {
+      const r = await handleAddLikeClick(show, parseInt(selected))
+      if (r) {
+        dispatch(updatePossibleShow(undefined))
+      }
+    }
   }
 
   useEffect(() => {
@@ -78,16 +88,18 @@ export const LikeShow: FC = () => {
           <div className="grid py-4 grid-cols-2 gap-4 justify-between">
             <Button
               className="btn-block"
-              color="primary"
-            >
-              Agregar
-            </Button>
-            <Button
-              className="btn-block"
-              color="error"
               onClick={handleClose}
             >
               mmm, mejor no
+            </Button>
+            <Button
+              className="btn-block"
+              color="primary"
+              loading={loading}
+              disabled={addDisabled}
+              onClick={handleAddClick}
+            >
+              Agregar
             </Button>
           </div>
         </label>

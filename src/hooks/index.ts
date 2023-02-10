@@ -1,5 +1,6 @@
 export * from './auth'
 export * from './carouselHome'
+export * from './likes'
 export * from './recommendations'
 export * from './redux'
 export * from './showInfo'
