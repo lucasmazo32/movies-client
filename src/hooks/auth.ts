@@ -1,14 +1,17 @@
-import { updateUser } from '@/state'
+import { logoutUser, updateUser } from '@/state'
 import {
   browserLocalPersistence,
   getAuth,
   GoogleAuthProvider,
   setPersistence,
   signInWithRedirect,
+  signOut,
 } from 'firebase/auth'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from './redux'
+
+const pathsToRedirectToHomeAfterSignOut = ['/likes']
 
 export const useGoogleFirebaseAuth = () => {
   const provider = new GoogleAuthProvider()
@@ -43,7 +46,7 @@ export const useCheckUserLoggedIn = () => {
 }
 
 export const useRedirectToLoginWhenNecessary = () => {
-  const userSubstate = useAppSelector(state => state.user)
+  const userSubstate = useAppSelector((state) => state.user)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -54,7 +57,7 @@ export const useRedirectToLoginWhenNecessary = () => {
 }
 
 export const useRedirectToHomepageWhenLogged = () => {
-  const userSubstate = useAppSelector(state => state.user)
+  const userSubstate = useAppSelector((state) => state.user)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -62,4 +65,23 @@ export const useRedirectToHomepageWhenLogged = () => {
       navigate('/')
     }
   }, [userSubstate.fetched])
+}
+
+export const useSignOut = () => {
+  const auth = getAuth()
+  const navigator = useNavigate()
+  const location = useLocation()
+  const dispatch = useAppDispatch()
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth)
+      if (pathsToRedirectToHomeAfterSignOut.includes(location.pathname)) {
+        navigator('/')
+      }
+      dispatch(logoutUser())
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  return handleSignOut
 }

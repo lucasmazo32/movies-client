@@ -16,6 +16,7 @@ interface UserReducers extends SliceCaseReducers<UserState> {
     payload: PayloadAction<UserModel | null>,
   ) => void
   addLike: (state: UserState, payload: PayloadAction<LikeModel>) => void
+  logoutUser: (state: UserState, payload: PayloadAction<void>) => void
 }
 
 export const userSlice = createSlice<UserState, UserReducers, 'user'>({
@@ -29,6 +30,10 @@ export const userSlice = createSlice<UserState, UserReducers, 'user'>({
     addLike: (state, action) => {
       state.likes = { ...state.likes, [action.payload.imdbId]: action.payload }
     },
+    logoutUser: (state, _) => {
+      state.userInfo = null
+      state.likes = undefined
+    },
   },
   extraReducers: (builder) =>
     builder.addCase(fetchUserInformationThunk.fulfilled, (state, action) => {
@@ -36,6 +41,6 @@ export const userSlice = createSlice<UserState, UserReducers, 'user'>({
     }),
 })
 
-export const { updateUser, addLike } = userSlice.actions
+export const { updateUser, addLike, logoutUser } = userSlice.actions
 
 export default userSlice.reducer

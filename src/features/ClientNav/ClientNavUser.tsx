@@ -1,14 +1,16 @@
 import { FC } from 'react'
 import { ReactComponent as UserIcon } from '@/assets/navbar/user.svg'
+import { useSignOut } from '@/hooks'
 
 export interface ClientNavUserProps {}
 
 export const ClientNavUser: FC<ClientNavUserProps> = ({}) => {
+  const handleSignOut = useSignOut()
   return (
     <div className="dropdown dropdown-hover dropdown-end">
       <label
         tabIndex={0}
-        className="btn btn-primary btn-circle btn-sm"
+        className="btn btn-primary btn-square btn-sm"
       >
         <UserIcon className="h-5 w-5" />
       </label>
@@ -17,7 +19,7 @@ export const ClientNavUser: FC<ClientNavUserProps> = ({}) => {
         className="dropdown-content menu sm:menu-normal menu-compact p-2 shadow bg-base-300 rounded-box sm:w-52 w-32"
       >
         <li>
-          <a>Logout</a>
+          <a onClick={handleSignOut}>Logout</a>
         </li>
       </ul>
     </div>
