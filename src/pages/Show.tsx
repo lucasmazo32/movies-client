@@ -1,4 +1,4 @@
-import { ClientNav, ShowPage, ShowPageSkeleton } from '@/features'
+import { ClientNav, LikeShow, ShowPage, ShowPageSkeleton } from '@/features'
 import { useGetShowInfo } from '@/hooks'
 import { FC } from 'react'
 
@@ -27,6 +27,7 @@ const Show: FC = () => {
       <div className="max-w-7xl px-4 mx-auto relative h-screen">
         <ClientNav />
         <ShowPage show={show} />
+        <LikeShow />
       </div>
     </>
   )

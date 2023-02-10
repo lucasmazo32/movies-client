@@ -14,7 +14,9 @@ export interface SearchProps {}
 const _Hit: FC<{ hit: any }> = ({ hit }) => {
   const navigator = useNavigate()
   const handleClick = () => {
-    const searchModalElement: HTMLInputElement = document.getElementById('search-modal') as HTMLInputElement
+    const searchModalElement: HTMLInputElement = document.getElementById(
+      'search-modal',
+    ) as HTMLInputElement
     searchModalElement.checked = false
     navigator(`/sh/${hit.objectID}`)
   }
@@ -37,26 +39,28 @@ export const Search: FC<SearchProps> = ({}) => {
       />
       <label
         htmlFor="search-modal"
-        className="modal cursor-pointer flex flex-col"
+        className="modal modal-bottom sm:modal-middle cursor-pointer"
       >
         <label
           htmlFor=""
-          className="modal-box flex flex-col gap-2"
+          className="modal-box"
         >
-          <InstantSearch
-            searchClient={algoliaSearchClient}
-            indexName="search_movies_series"
-            stalledSearchDelay={300}
-          >
-            <Configure hitsPerPage={4} />
-            <SearchBox
-              searchAsYouType={true}
-              translations={{
-                placeholder: 'Busca aquí...',
-              }}
-            />
-            <Hits hitComponent={_Hit} />
-          </InstantSearch>
+          <div className="flex flex-col gap-2">
+            <InstantSearch
+              searchClient={algoliaSearchClient}
+              indexName="search_movies_series"
+              stalledSearchDelay={300}
+            >
+              <Configure hitsPerPage={4} />
+              <SearchBox
+                searchAsYouType={true}
+                translations={{
+                  placeholder: 'Busca aquí...',
+                }}
+              />
+              <Hits hitComponent={_Hit} />
+            </InstantSearch>
+          </div>
         </label>
       </label>
     </>
