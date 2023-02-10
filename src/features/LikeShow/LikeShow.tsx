@@ -4,11 +4,13 @@ import { ShowModel } from '@/models'
 import { updatePossibleShow } from '@/state'
 import { ChangeEventHandler, FC, useEffect, useState } from 'react'
 import { Button } from 'react-daisyui'
+import { LoginModal } from '../LoginModal'
 
 export const LikeShow: FC = () => {
   const [showInfo, setShowInfo] = useState<ShowModel | undefined>()
   const [selected, setSelected] = useState<string>('undefined')
   const possibleLikeShow = useAppSelector((state) => state.data.possibleShow)
+  const uid = useAppSelector((state) => state.user.userInfo?.uid)
   const shows = useAppSelector((state) => state.data.shows)
   const show = shows[possibleLikeShow as keyof typeof shows]
   const { handleAddLikeClick, loading } = useAddLikeForShow()
@@ -40,6 +42,14 @@ export const LikeShow: FC = () => {
     }
   }, [show])
 
+  if (uid === undefined) {
+    return (
+      <LoginModal
+        checked={!!showInfo}
+      />
+    )
+  }
+
   return (
     <>
       <input
@@ -49,7 +59,7 @@ export const LikeShow: FC = () => {
         readOnly
         checked={!!showInfo}
       />
-      <div className="modal">
+      <div className="modal modal-bottom sm:modal-middle">
         <label
           className="modal-box relative"
           htmlFor=""
