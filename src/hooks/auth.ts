@@ -13,29 +13,33 @@ import { useAppDispatch, useAppSelector } from './redux'
 
 const pathsToRedirectToHomeAfterSignOut = ['/likes']
 
-export const useGoogleFirebaseAuth = () => {
+export const useGoogleFirebaseAuth = async (): Promise<() => void> => {
   const provider = new GoogleAuthProvider()
   const auth = getAuth()
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
   auth.useDeviceLanguage()
-  setPersistence(auth, browserLocalPersistence)
-  const handleGoogleLogin = () => {
-    signInWithPopup(auth, provider).then((credentials) => {
-      dispatch(
-        updateUser({
-          name: credentials.user.displayName ?? 'Cineauta',
-          email: credentials.user.email ?? '',
-          uid: credentials.user.uid,
-        }),
-      )
-      navigate('/')
-    })
+  await setPersistence(auth, browserLocalPersistence)
+  const handleGoogleLogin = (): void => {
+    signInWithPopup(auth, provider)
+      .then((credentials) => {
+        dispatch(
+          updateUser({
+            name: credentials.user.displayName ?? 'Cineauta',
+            email: credentials.user.email ?? '',
+            uid: credentials.user.uid,
+          }),
+        )
+        navigate('/')
+      })
+      .catch((e) => {
+        console.log(e)
+      })
   }
   return handleGoogleLogin
 }
 
-export const useCheckUserLoggedIn = () => {
+export const useCheckUserLoggedIn = (): void => {
   const auth = getAuth()
   const dispatch = useAppDispatch()
 
@@ -56,7 +60,7 @@ export const useCheckUserLoggedIn = () => {
   }, [])
 }
 
-export const useRedirectToLoginWhenNecessary = () => {
+export const useRedirectToLoginWhenNecessary = (): void => {
   const userSubstate = useAppSelector((state) => state.user)
   const navigate = useNavigate()
 
@@ -67,7 +71,7 @@ export const useRedirectToLoginWhenNecessary = () => {
   }, [userSubstate.fetched])
 }
 
-export const useRedirectToHomepageWhenLogged = () => {
+export const useRedirectToHomepageWhenLogged = (): void => {
   const userSubstate = useAppSelector((state) => state.user)
   const navigate = useNavigate()
 
@@ -78,12 +82,12 @@ export const useRedirectToHomepageWhenLogged = () => {
   }, [userSubstate.fetched])
 }
 
-export const useSignOut = () => {
+export const useSignOut = (): (() => Promise<void>) => {
   const auth = getAuth()
   const navigator = useNavigate()
   const location = useLocation()
   const dispatch = useAppDispatch()
-  const handleSignOut = async () => {
+  const handleSignOut = async (): Promise<void> => {
     try {
       await signOut(auth)
       if (pathsToRedirectToHomeAfterSignOut.includes(location.pathname)) {

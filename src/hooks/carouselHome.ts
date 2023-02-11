@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
-export const useHomepageCarousel = (maxIndex: number) => {
+export const useHomepageCarousel = (
+  maxIndex: number,
+): { selected: number; handleSelect: (index: number) => void } => {
   const [selected, setSelected] = useState<number>(0)
   const [automatic, setAutomatic] = useState<boolean>(true)
   const [timer, setTimer] = useState<number | undefined>()
@@ -19,7 +21,7 @@ export const useHomepageCarousel = (maxIndex: number) => {
     }
   }, [selected])
 
-  const handleSelect = (index: number) => {
+  const handleSelect = (index: number): void => {
     setAutomatic(false)
     clearTimeout(timer)
     setSelected(index)

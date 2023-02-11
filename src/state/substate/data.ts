@@ -1,5 +1,5 @@
-import { RecommendationModel, ShowModel } from '@/models'
-import { createSlice, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit'
+import { type RecommendationModel, type ShowModel } from '@/models'
+import { createSlice, type PayloadAction, type SliceCaseReducers } from '@reduxjs/toolkit'
 import { fetchRecommendationsThunk, fetchShowByIdThunk } from '../thunk'
 
 interface DataState {

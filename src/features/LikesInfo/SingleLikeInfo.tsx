@@ -1,7 +1,7 @@
 import { ReactComponent as StarIcon } from '@/assets/icons/star.svg'
 import { watchDesireRate } from '@/constants'
-import { LikeModel } from '@/models'
-import { FC } from 'react'
+import { type LikeModel } from '@/models'
+import { type FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export interface SingleLikeInfoProps {
@@ -10,7 +10,7 @@ export interface SingleLikeInfoProps {
 
 export const SingleLikeInfo: FC<SingleLikeInfoProps> = ({ like }) => {
   const navigator = useNavigate()
-  const handleClick = () => {
+  const handleClick = (): void => {
     navigator(`/sh/${like.imdbId}`)
   }
   return (

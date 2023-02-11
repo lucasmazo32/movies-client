@@ -1,8 +1,8 @@
 import { ClientNav, HomeRecom, LikeShow } from '@/features'
 import { useGetRecommendations } from '@/hooks'
-import { FC } from 'react'
+import { type FC } from 'react'
 
-const Homepage: FC = ({}) => {
+const Homepage: FC = () => {
   useGetRecommendations()
 
   return (

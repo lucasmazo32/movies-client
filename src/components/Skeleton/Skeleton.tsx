@@ -1,5 +1,5 @@
 import { clx } from '@/utils'
-import { FC, HTMLAttributes } from 'react'
+import { type FC, type HTMLAttributes } from 'react'
 
 export interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {}
 

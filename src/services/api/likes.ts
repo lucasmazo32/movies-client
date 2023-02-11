@@ -1,4 +1,4 @@
-import { http } from "../http"
+import { http } from '../http'
 
 interface input {
   imdbId: string
@@ -10,6 +10,6 @@ interface input {
   uid: string
 }
 
-export const postLike = async (data: input) => {
+export const postLike = async (data: input): Promise<unknown> => {
   return await http.post('/likes', data)
 }

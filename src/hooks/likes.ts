@@ -1,23 +1,26 @@
-import { ShowModel } from '@/models'
+import { type ShowModel } from '@/models'
 import { postLike } from '@/services'
 import { addLike } from '@/state'
 import { fetchUserInformationThunk } from '@/state/thunk'
 import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from './redux'
 
-export const useGetUserLikes = () => {
+export const useGetUserLikes = (): void => {
   const dispatch = useAppDispatch()
   const uid = useAppSelector((state) => state.user.userInfo)?.uid
   const likes = useAppSelector((state) => state.user.likes)
 
   useEffect(() => {
     if (uid && likes === undefined) {
-      dispatch(fetchUserInformationThunk(uid))
+      dispatch(fetchUserInformationThunk(uid)).catch((e) => {})
     }
   }, [uid])
 }
 
-export const useAddLikeForShow = () => {
+export const useAddLikeForShow = (): {
+  handleAddLikeClick: (show: ShowModel, showDesire: number) => Promise<boolean>
+  loading: boolean
+} => {
   const [loading, setLoading] = useState<boolean>(false)
   const dispatch = useAppDispatch()
   const uid = useAppSelector((state) => state.user.userInfo?.uid)
@@ -53,7 +56,7 @@ export const useAddLikeForShow = () => {
           watchDesire: showDesire,
           watched: false,
           score: 0,
-          uid: uid,
+          uid,
         }),
       )
       return true

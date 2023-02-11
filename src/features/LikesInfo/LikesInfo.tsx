@@ -1,8 +1,8 @@
 import { useAppSelector } from '@/hooks'
-import { FC } from 'react'
+import { type FC } from 'react'
 import { SingleLikeInfo } from './SingleLikeInfo'
 
-export const LikesInfo: FC = ({}) => {
+export const LikesInfo: FC = () => {
   const likesMap = useAppSelector((state) => state.user.likes)
   const likes = Object.values(likesMap ?? {}).sort(
     (a, b) => b.watchDesire - a.watchDesire,
