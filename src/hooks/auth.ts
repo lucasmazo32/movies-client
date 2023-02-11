@@ -4,7 +4,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   setPersistence,
-  signInWithRedirect,
+  signInWithPopup,
   signOut,
 } from 'firebase/auth'
 import { useEffect } from 'react'
@@ -16,10 +16,21 @@ const pathsToRedirectToHomeAfterSignOut = ['/likes']
 export const useGoogleFirebaseAuth = () => {
   const provider = new GoogleAuthProvider()
   const auth = getAuth()
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   auth.useDeviceLanguage()
   setPersistence(auth, browserLocalPersistence)
   const handleGoogleLogin = () => {
-    signInWithRedirect(auth, provider)
+    signInWithPopup(auth, provider).then((credentials) => {
+      dispatch(
+        updateUser({
+          name: credentials.user.displayName ?? 'Cineauta',
+          email: credentials.user.email ?? '',
+          uid: credentials.user.uid,
+        }),
+      )
+      navigate('/')
+    })
   }
   return handleGoogleLogin
 }
