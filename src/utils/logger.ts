@@ -1,3 +1,6 @@
+import { analytics } from '@/firebase'
+import { logEvent } from 'firebase/analytics'
+
 export const isLocal = process.env.NODE_ENV === 'development'
 
 const logger = {
@@ -45,6 +48,7 @@ const logger = {
       )
       return null
     }
+    logEvent(analytics, name, info)
   },
 }
 

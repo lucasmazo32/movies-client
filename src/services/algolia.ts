@@ -8,7 +8,7 @@ export const initializeAlgoliaSearchClient = (): void => {
     import.meta.env.VITE_ALGOLIA_APP_ID,
     import.meta.env.VITE_ALGOLIA_API_KEY,
   )
-  logger.log('initialize_algolia')
+  logger.debug('initialize_algolia')
 }
 
 export { algoliaSearchClient }
