@@ -1,3 +1,4 @@
+import { logger } from '@/utils'
 import { useEffect, useState } from 'react'
 
 export const useHomepageCarousel = (
@@ -22,6 +23,7 @@ export const useHomepageCarousel = (
   }, [selected])
 
   const handleSelect = (index: number): void => {
+    logger.log(`select_recommended_carousel`, { index })
     setAutomatic(false)
     clearTimeout(timer)
     setSelected(index)

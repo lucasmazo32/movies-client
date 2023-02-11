@@ -2,6 +2,7 @@ import { type ShowModel } from '@/models'
 import { postLike } from '@/services'
 import { addLike } from '@/state'
 import { fetchUserInformationThunk } from '@/state/thunk'
+import { logger } from '@/utils'
 import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from './redux'
 
@@ -12,7 +13,9 @@ export const useGetUserLikes = (): void => {
 
   useEffect(() => {
     if (uid && likes === undefined) {
-      dispatch(fetchUserInformationThunk(uid)).catch((e) => {})
+      dispatch(fetchUserInformationThunk(uid)).catch((e) => {
+        logger.error(e)
+      })
     }
   }, [uid])
 }
@@ -29,6 +32,9 @@ export const useAddLikeForShow = (): {
     show: ShowModel,
     showDesire: number,
   ): Promise<boolean> => {
+    logger.log(`add_click`, {
+      imdbId: show.imdbId,
+    })
     if (!uid) {
       return false
     }
@@ -61,7 +67,7 @@ export const useAddLikeForShow = (): {
       )
       return true
     } catch (error) {
-      console.log(error)
+      logger.error(error)
       return false
     }
   }

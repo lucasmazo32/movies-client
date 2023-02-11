@@ -8,6 +8,7 @@ import {
   SearchBox,
 } from 'react-instantsearch-dom'
 import { useNavigate } from 'react-router-dom'
+import { logger } from '@/utils'
 
 const _Hit: FC<{ hit: any }> = ({ hit }) => {
   const navigator = useNavigate()
@@ -16,6 +17,7 @@ const _Hit: FC<{ hit: any }> = ({ hit }) => {
       'search-modal',
     ) as HTMLInputElement
     searchModalElement.checked = false
+    logger.log(`navigate`, { to: hit.objectID as string })
     navigator(`/sh/${hit.objectID as string}`)
   }
   return <a onClick={handleClick}>{hit.title}</a>

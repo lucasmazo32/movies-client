@@ -6,11 +6,13 @@ import { ClientNavUserLogin } from './ClientNavUserLogin'
 import { useNavigate } from 'react-router-dom'
 import { Search } from '../Search'
 import { ClientLikes } from './ClientLikes'
+import { logger } from '@/utils'
 
 export const ClientNav: FC = () => {
   const navigator = useNavigate()
 
   const handleLogoClick = (): void => {
+    logger.log('navigate', { to: '/', action: 'nav_logo_click' })
     navigator('/')
   }
 

@@ -1,7 +1,11 @@
 // Import the functions you need from the SDKs you need
+import { logger } from '@/utils'
 import { type FirebaseApp, initializeApp } from 'firebase/app'
+import { type Analytics, getAnalytics } from 'firebase/analytics'
+
 
 let firebaseApp: FirebaseApp
+let analytics: Analytics
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -18,6 +22,8 @@ const firebaseConfig = {
 // Initialize Firebase
 export const initializeFirebase = (): void => {
   firebaseApp = initializeApp(firebaseConfig)
+  analytics = getAnalytics(firebaseApp)
+  logger.debug('initialize_firebase')
 }
 
-export { firebaseApp }
+export { firebaseApp, analytics }

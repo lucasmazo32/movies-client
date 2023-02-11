@@ -1,4 +1,5 @@
 import { fetchRecommendationsThunk } from '@/state/thunk'
+import { logger } from '@/utils'
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from './redux'
 
@@ -10,7 +11,7 @@ export const useGetRecommendations = (): void => {
   useEffect(() => {
     if (!recommendations) {
       dispatch(fetchRecommendationsThunk(uid ?? 'default')).catch((e) => {
-        console.log(e)
+        logger.error(e)
       })
     }
   }, [uid])

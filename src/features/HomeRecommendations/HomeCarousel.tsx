@@ -17,13 +17,15 @@ export const HomeCarousel: FC<HomeCarouselProps> = ({
       {recommendations.map((r, i) => {
         return (
           <label
-            onClick={() => { handleSelect(i); }}
             key={r.imdbId}
             className="carousel-btn"
           >
             <input
               type="radio"
               name="home-carousel"
+              onClick={() => {
+                handleSelect(i)
+              }}
               defaultChecked={i === selected}
               id={`${r.imdbId}-radio`}
               className="hidden"
@@ -32,9 +34,7 @@ export const HomeCarousel: FC<HomeCarouselProps> = ({
               src={r.backdropURLs[300]}
               alt={r.title}
             />
-            <span>
-              {r.title}
-            </span>
+            <span>{r.title}</span>
           </label>
         )
       })}

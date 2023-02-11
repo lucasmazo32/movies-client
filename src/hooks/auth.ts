@@ -1,4 +1,5 @@
 import { logoutUser, updateUser } from '@/state'
+import { logger } from '@/utils'
 import {
   browserLocalPersistence,
   getAuth,
@@ -21,6 +22,7 @@ export const useGoogleFirebaseAuth = async (): Promise<() => void> => {
   auth.useDeviceLanguage()
   await setPersistence(auth, browserLocalPersistence)
   const handleGoogleLogin = (): void => {
+    logger.log('google_popup_sign_in')
     signInWithPopup(auth, provider)
       .then((credentials) => {
         dispatch(
@@ -33,7 +35,7 @@ export const useGoogleFirebaseAuth = async (): Promise<() => void> => {
         navigate('/')
       })
       .catch((e) => {
-        console.log(e)
+        logger.error(e)
       })
   }
   return handleGoogleLogin
@@ -45,6 +47,7 @@ export const useCheckUserLoggedIn = (): void => {
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
+      logger.debug(`Got user ${user?.uid ?? 'none'}`)
       if (user) {
         dispatch(
           updateUser({
@@ -77,6 +80,7 @@ export const useRedirectToHomepageWhenLogged = (): void => {
 
   useEffect(() => {
     if (userSubstate.userInfo !== null) {
+      logger.log('redirecting', { to: '/', from: '/login' })
       navigate('/')
     }
   }, [userSubstate.fetched])
@@ -88,6 +92,7 @@ export const useSignOut = (): (() => Promise<void>) => {
   const location = useLocation()
   const dispatch = useAppDispatch()
   const handleSignOut = async (): Promise<void> => {
+    logger.log('sign_out', { action: 'button_click' })
     try {
       await signOut(auth)
       if (pathsToRedirectToHomeAfterSignOut.includes(location.pathname)) {
@@ -95,7 +100,7 @@ export const useSignOut = (): (() => Promise<void>) => {
       }
       dispatch(logoutUser())
     } catch (error) {
-      console.log(error)
+      logger.error(error)
     }
   }
   return handleSignOut

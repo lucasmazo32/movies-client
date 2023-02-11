@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import { ReactComponent as UserIcon } from '@/assets/navbar/user.svg'
 import { useSignOut } from '@/hooks'
+import { logger } from '@/utils'
 
 export const ClientNavUser: FC = () => {
   const handleSignOut = useSignOut()
@@ -20,7 +21,7 @@ export const ClientNavUser: FC = () => {
           <a
             onClick={() => {
               handleSignOut().catch((e) => {
-                console.log(e)
+                logger.error(e)
               })
             }}
           >

@@ -4,6 +4,7 @@ import {
   getShowRuntime,
   getShowYear,
   getSlicedShowOverview,
+  logger,
 } from '@/utils'
 import { type FC, memo } from 'react'
 import { Divider } from 'react-daisyui'
@@ -17,6 +18,7 @@ export interface HomeMainRecProps {
 export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
   const navigate = useNavigate()
   const handleBackdropClick = (): void => {
+    logger.log('navigate', { to: `/sh/${show.imdbId}`, from: '/' })
     navigate(`/sh/${show.imdbId}`)
   }
   return (
