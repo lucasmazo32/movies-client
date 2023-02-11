@@ -1,12 +1,11 @@
-import { HBOButton, PrimeButton } from '@/components'
-import { ShowModel } from '@/models'
+import { type ShowModel } from '@/models'
 import {
   getShowDirectors,
   getShowRuntime,
   getShowYear,
   getSlicedShowOverview,
 } from '@/utils'
-import { FC, memo } from 'react'
+import { type FC, memo } from 'react'
 import { Divider } from 'react-daisyui'
 import { useNavigate } from 'react-router-dom'
 import { HomeMainRecLink } from './HomeMainRecLink'
@@ -17,7 +16,7 @@ export interface HomeMainRecProps {
 
 export const HomeMainRec: FC<HomeMainRecProps> = memo(({ show }) => {
   const navigate = useNavigate()
-  const handleBackdropClick = () => {
+  const handleBackdropClick = (): void => {
     navigate(`/sh/${show.imdbId}`)
   }
   return (

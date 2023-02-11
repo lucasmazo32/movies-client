@@ -1,8 +1,8 @@
 import { watchDesireRate } from '@/constants'
 import { useAddLikeForShow, useAppDispatch, useAppSelector } from '@/hooks'
-import { ShowModel } from '@/models'
+import { type ShowModel } from '@/models'
 import { updatePossibleShow } from '@/state'
-import { ChangeEventHandler, FC, useEffect, useState } from 'react'
+import { type ChangeEventHandler, type FC, useEffect, useState } from 'react'
 import { Button } from 'react-daisyui'
 import { LoginModal } from '../LoginModal'
 
@@ -21,11 +21,11 @@ export const LikeShow: FC = () => {
   const handleSelect: ChangeEventHandler<HTMLSelectElement> = (e) => {
     setSelected(e.target.value)
   }
-  const handleClose = () => {
+  const handleClose = (): void => {
     setSelected('undefined')
     dispatch(updatePossibleShow(undefined))
   }
-  const handleAddClick = async () => {
+  const handleAddClick = async (): Promise<void> => {
     if (show) {
       const r = await handleAddLikeClick(show, parseInt(selected))
       if (r) {
@@ -43,11 +43,7 @@ export const LikeShow: FC = () => {
   }, [show])
 
   if (uid === undefined) {
-    return (
-      <LoginModal
-        checked={!!showInfo}
-      />
-    )
+    return <LoginModal checked={!!showInfo} />
   }
 
   return (
@@ -107,7 +103,9 @@ export const LikeShow: FC = () => {
               color="primary"
               loading={loading}
               disabled={addDisabled}
-              onClick={handleAddClick}
+              onClick={() => {
+                handleAddClick().catch((e) => {})
+              }}
             >
               Agregar
             </Button>

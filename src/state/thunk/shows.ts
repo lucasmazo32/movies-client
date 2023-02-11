@@ -1,4 +1,4 @@
-import { ShowModel } from '@/models'
+import { type ShowModel } from '@/models'
 import { fetchShowById } from '@/services'
 import { createAsyncThunk } from '@reduxjs/toolkit'
 

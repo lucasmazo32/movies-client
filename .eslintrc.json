@@ -20,7 +20,7 @@
       "version": "detect"
     }
   },
-  "plugins": ["react", "pina-colada-rules"],
+  "plugins": ["react"],
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],

@@ -1,10 +1,8 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import { ReactComponent as UserIcon } from '@/assets/navbar/user.svg'
 import { useSignOut } from '@/hooks'
 
-export interface ClientNavUserProps {}
-
-export const ClientNavUser: FC<ClientNavUserProps> = ({}) => {
+export const ClientNavUser: FC = () => {
   const handleSignOut = useSignOut()
   return (
     <div className="dropdown dropdown-hover dropdown-end">
@@ -19,7 +17,15 @@ export const ClientNavUser: FC<ClientNavUserProps> = ({}) => {
         className="dropdown-content menu sm:menu-normal menu-compact p-2 shadow bg-base-300 rounded-box sm:w-52 w-32"
       >
         <li>
-          <a onClick={handleSignOut}>Logout</a>
+          <a
+            onClick={() => {
+              handleSignOut().catch((e) => {
+                console.log(e)
+              })
+            }}
+          >
+            Logout
+          </a>
         </li>
       </ul>
     </div>

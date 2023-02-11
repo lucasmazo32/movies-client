@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import { Button, Navbar } from 'react-daisyui'
 import { ReactComponent as LogoIcon } from '@/assets/logo/logo.svg'
 import { ReactComponent as HomeIcon } from '@/assets/icons/home.svg'
@@ -10,7 +10,7 @@ import { ClientLikes } from './ClientLikes'
 export const ClientNav: FC = () => {
   const navigator = useNavigate()
 
-  const handleLogoClick = () => {
+  const handleLogoClick = (): void => {
     navigator('/')
   }
 

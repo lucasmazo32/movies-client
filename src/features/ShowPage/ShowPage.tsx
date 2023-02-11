@@ -1,5 +1,5 @@
 import { ReactComponent as StarIcon } from '@/assets/icons/star.svg'
-import { ShowModel } from '@/models'
+import { type ShowModel } from '@/models'
 import {
   getActors,
   getShowRuntime,
@@ -7,7 +7,7 @@ import {
   getSlicedShowOverview,
   numToHM,
 } from '@/utils'
-import { FC, memo } from 'react'
+import { type FC, memo } from 'react'
 import { ShowPageBtn } from './ShowPageBtn'
 
 export interface ShowPageProps {

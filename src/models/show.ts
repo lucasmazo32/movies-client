@@ -1,4 +1,4 @@
-import { CountryCode } from '@/constants'
+import { type CountryCode } from '@/constants'
 
 export type StreamingInfoMondel = Record<
   CountryCode,

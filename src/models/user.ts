@@ -1,4 +1,4 @@
-import { LikeModel } from './like'
+import { type LikeModel } from './like'
 
 export interface UserModel {
   name: string

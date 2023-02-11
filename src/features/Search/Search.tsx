@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import { ReactComponent as SearchIcon } from '@/assets/icons/search.svg'
 import { algoliaSearchClient } from '@/services'
 import {
@@ -9,21 +9,19 @@ import {
 } from 'react-instantsearch-dom'
 import { useNavigate } from 'react-router-dom'
 
-export interface SearchProps {}
-
 const _Hit: FC<{ hit: any }> = ({ hit }) => {
   const navigator = useNavigate()
-  const handleClick = () => {
+  const handleClick = (): void => {
     const searchModalElement: HTMLInputElement = document.getElementById(
       'search-modal',
     ) as HTMLInputElement
     searchModalElement.checked = false
-    navigator(`/sh/${hit.objectID}`)
+    navigator(`/sh/${hit.objectID as string}`)
   }
   return <a onClick={handleClick}>{hit.title}</a>
 }
 
-export const Search: FC<SearchProps> = ({}) => {
+export const Search: FC = () => {
   return (
     <>
       <label

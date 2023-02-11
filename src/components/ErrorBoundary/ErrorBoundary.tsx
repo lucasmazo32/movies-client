@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { type ReactElement } from 'react'
 
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
@@ -9,17 +9,19 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false }
   }
 
-  static getDerivedStateFromError(error: unknown) {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true }
+  static getDerivedStateFromError(error: unknown): {
+    hasError: boolean
+    error: unknown
+  } {
+    return { hasError: true, error }
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
+  componentDidCatch(error: any, errorInfo: any): void {
     // You can also log the error to an error reporting service
     console.log(error, errorInfo)
   }
 
-  render() {
+  render(): ReactElement | React.ReactNode {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return <h1>Something went wrong.</h1>

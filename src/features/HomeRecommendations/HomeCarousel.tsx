@@ -1,5 +1,5 @@
-import { ShowModel } from '@/models'
-import { FC } from 'react'
+import { type ShowModel } from '@/models'
+import { type FC } from 'react'
 
 export interface HomeCarouselProps {
   recommendations: ShowModel[]
@@ -17,7 +17,7 @@ export const HomeCarousel: FC<HomeCarouselProps> = ({
       {recommendations.map((r, i) => {
         return (
           <label
-            onClick={() => handleSelect(i)}
+            onClick={() => { handleSelect(i); }}
             key={r.imdbId}
             className="carousel-btn"
           >
