@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, memo } from 'react'
+import { type FC, type HTMLAttributes, memo } from 'react'
 import { ReactComponent as HBOIcon } from '@/assets/services/hbo.svg'
 import { clx } from '@/utils'
 

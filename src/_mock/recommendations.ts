@@ -1,4 +1,4 @@
-import { RecommendationModel } from '@/models'
+import { type RecommendationModel } from '@/models'
 
 export const mockRecommendations: RecommendationModel = {
   shows: [

@@ -1,5 +1,5 @@
-import { ServiceCode, servicesArray } from '@/constants'
-import { ShowModel } from '@/models'
+import { type ServiceCode, servicesArray } from '@/constants'
+import { type ShowModel } from '@/models'
 
 export const getShowRuntime = (show: ShowModel): number => {
   return show.runtime === 0 ? show.episodeRuntimes?.at(0) ?? 40 : show.runtime
@@ -20,8 +20,13 @@ export const getSlicedShowOverview = (
   return show.overview.slice(0, length) + '...'
 }
 
-export const getShowLinks = (show: ShowModel) => {
-  const ans: { streamService: ServiceCode; link: string }[] = []
+export const getShowLinks = (
+  show: ShowModel,
+): Array<{
+  streamService: ServiceCode
+  link: string
+}> => {
+  const ans: Array<{ streamService: ServiceCode; link: string }> = []
   Object.entries(show.streamingInfo.co).forEach((v) => {
     if (servicesArray.includes(v[0] as ServiceCode)) {
       const streamService = v[0] as ServiceCode
@@ -36,10 +41,10 @@ export const getShowLinks = (show: ShowModel) => {
   return ans
 }
 
-export const getActors = (show: ShowModel) => {
+export const getActors = (show: ShowModel): string => {
   return show.cast.join(', ')
 }
 
-export const getShowDirectors = (show: ShowModel) => {
+export const getShowDirectors = (show: ShowModel): string => {
   return (show.directors ?? show.creators ?? ['No info']).join(', ')
 }

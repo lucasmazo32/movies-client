@@ -1,5 +1,5 @@
 import { Skeleton } from '@/components'
-import { FC } from 'react'
+import { type FC } from 'react'
 
 export const ShowPageSkeleton: FC = () => {
   return (

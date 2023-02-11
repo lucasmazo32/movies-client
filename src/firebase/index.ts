@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { FirebaseApp, initializeApp } from 'firebase/app'
+import { type FirebaseApp, initializeApp } from 'firebase/app'
 
 let firebaseApp: FirebaseApp
 
@@ -16,7 +16,7 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-export const initializeFirebase = () => {
+export const initializeFirebase = (): void => {
   firebaseApp = initializeApp(firebaseConfig)
 }
 

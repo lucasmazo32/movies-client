@@ -1,6 +1,6 @@
 import { LoginFields } from '@/features'
 import { useRedirectToHomepageWhenLogged } from '@/hooks'
-import { FC } from 'react'
+import { type FC } from 'react'
 
 const Login: FC = () => {
   useRedirectToHomepageWhenLogged()

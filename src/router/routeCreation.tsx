@@ -1,8 +1,8 @@
-import { FC, lazy, LazyExoticComponent, Suspense } from 'react'
-import { RouteObject } from 'react-router-dom'
+import { type FC, lazy, type LazyExoticComponent, Suspense } from 'react'
+import { type RouteObject } from 'react-router-dom'
 
 interface PageName {
-  Element: LazyExoticComponent<FC<{}>>
+  Element: LazyExoticComponent<FC>
   path: string
 }
 const pagesName: PageName[] = [

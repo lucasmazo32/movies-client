@@ -1,9 +1,7 @@
-import { FC } from 'react'
-import { Button, Input } from 'react-daisyui'
+import { type FC } from 'react'
+import { Button } from 'react-daisyui'
 
-export interface LoginFormProps {}
-
-export const LoginForm: FC<LoginFormProps> = ({}) => {
+export const LoginForm: FC = () => {
   return (
     <form className="w-full flex flex-col gap-6">
       <input

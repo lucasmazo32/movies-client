@@ -1,5 +1,5 @@
-import { LikeModel, UserModel } from '@/models'
-import { createSlice, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit'
+import { type LikeModel, type UserModel } from '@/models'
+import { createSlice, type PayloadAction, type SliceCaseReducers } from '@reduxjs/toolkit'
 import { fetchUserInformationThunk } from '../thunk'
 
 interface UserState {

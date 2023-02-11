@@ -1,6 +1,6 @@
 import { ClientNav, LikeShow, ShowPage, ShowPageSkeleton } from '@/features'
 import { useGetShowInfo } from '@/hooks'
-import { FC } from 'react'
+import { type FC } from 'react'
 
 const Show: FC = () => {
   const show = useGetShowInfo()

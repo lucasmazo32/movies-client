@@ -1,12 +1,10 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import { Button, Divider } from 'react-daisyui'
 import { ReactComponent as GoogleIcon } from '@/assets/login/google.svg'
 import { LoginForm } from './LoginForm'
 import { useGoogleFirebaseAuth } from '@/hooks'
 
-export interface LoginOptionsProps {}
-
-export const LoginOptions: FC<LoginOptionsProps> = ({}) => {
+export const LoginOptions: FC = () => {
   const loginGoogle = useGoogleFirebaseAuth()
 
   return (
@@ -16,7 +14,13 @@ export const LoginOptions: FC<LoginOptionsProps> = ({}) => {
         Entra tus credenciales para continuar
       </span>
       <Button
-        onClick={loginGoogle}
+        onClick={() => {
+          loginGoogle
+            .then((f) => {
+              f()
+            })
+            .catch((e) => {})
+        }}
         className="bg-white hover:bg-white hover:bg-opacity-80 text-base-100 rounded btn-block mt-8"
       >
         <GoogleIcon className="mr-2" /> Ingresa con Google

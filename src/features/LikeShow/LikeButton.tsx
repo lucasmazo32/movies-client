@@ -3,7 +3,7 @@ import { ReactComponent as CheckIcon } from '@/assets/icons/check.svg'
 import { useAppDispatch, useAppSelector } from '@/hooks'
 import { updatePossibleShow } from '@/state'
 import { clx } from '@/utils'
-import { FC, HTMLAttributes, memo } from 'react'
+import { type FC, type HTMLAttributes, memo } from 'react'
 import { Button } from 'react-daisyui'
 
 export interface LikeButtonProps
@@ -19,7 +19,7 @@ export const LikeButton: FC<LikeButtonProps> = memo(({ imdbId, className }) => {
   if (keys.includes(imdbId)) {
     added = true
   }
-  const handleClick = () => {
+  const handleClick = (): void => {
     if (!added) {
       dispatch(updatePossibleShow(imdbId))
     }

@@ -1,5 +1,5 @@
 import { useAppSelector, useHomepageCarousel } from '@/hooks'
-import { FC } from 'react'
+import { type FC } from 'react'
 import { HomeCarousel } from './HomeCarousel'
 import { HomeMainRec } from './HomeMainRec'
 import { HomeRecomSkeleton } from './HomeRecomSkeleton'

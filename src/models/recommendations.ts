@@ -1,5 +1,5 @@
-import { ShowModel } from './show'
+import { type ShowModel } from './show'
 
 export interface RecommendationModel {
-  shows: Array<ShowModel>
+  shows: ShowModel[]
 }

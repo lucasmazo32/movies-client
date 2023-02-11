@@ -4,10 +4,10 @@ import {
   NetflixButton,
   PrimeButton,
 } from '@/components'
-import { ServiceCode } from '@/constants'
-import { ShowModel } from '@/models'
+import { type ServiceCode } from '@/constants'
+import { type ShowModel } from '@/models'
 import { getShowLinks } from '@/utils'
-import { FC, HTMLAttributes, memo } from 'react'
+import { type FC, type HTMLAttributes, memo } from 'react'
 import { LikeButton } from '../LikeShow'
 
 export interface ShowPageBtnProps {
@@ -30,7 +30,7 @@ export const ShowPageBtn: FC<ShowPageBtnProps> = memo(({ show }) => {
     <div className="flex flex-wrap gap-4">
       {streamInfo.map((info) => {
         const ButonEl = mapServiceToButton[info.streamService]
-        const handleClick = () => {
+        const handleClick = (): void => {
           window.open(info.link, '_blank')
         }
         return (

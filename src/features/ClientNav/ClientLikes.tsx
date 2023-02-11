@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { type FC } from 'react'
 import { Button } from 'react-daisyui'
 import { ReactComponent as LikedIcon } from '@/assets/icons/liked.svg'
 import { useNavigate } from 'react-router-dom'
@@ -8,7 +8,7 @@ export const ClientLikes: FC = () => {
   const navigator = useNavigate()
   const likes = useAppSelector((state) => state.user.likes)
 
-  const handleLikeClick = () => {
+  const handleLikeClick = (): void => {
     navigator('/likes')
   }
 
