@@ -1,5 +1,6 @@
 import { type ShowModel } from '@/models'
 import { fetchShowByIdThunk } from '@/state/thunk'
+import { logger } from '@/utils'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from './redux'
@@ -15,7 +16,7 @@ export const useGetShowInfo = (): ShowModel | false | undefined => {
   useEffect(() => {
     if (show === undefined) {
       dispatch(fetchShowByIdThunk(imdbId ?? '')).catch((e) => {
-        console.log(e)
+        logger.error(e)
       })
     }
   }, [show])

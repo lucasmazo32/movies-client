@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import { logger } from '@/utils'
 import { type FirebaseApp, initializeApp } from 'firebase/app'
 
 let firebaseApp: FirebaseApp
@@ -18,6 +19,7 @@ const firebaseConfig = {
 // Initialize Firebase
 export const initializeFirebase = (): void => {
   firebaseApp = initializeApp(firebaseConfig)
+  logger.log('initialize_firebase')
 }
 
 export { firebaseApp }
