@@ -2,6 +2,7 @@ import { watchDesireRate } from '@/constants'
 import { useAddLikeForShow, useAppDispatch, useAppSelector } from '@/hooks'
 import { type ShowModel } from '@/models'
 import { updatePossibleShow } from '@/state'
+import { logger } from '@/utils'
 import { type ChangeEventHandler, type FC, useEffect, useState } from 'react'
 import { Button } from 'react-daisyui'
 import { LoginModal } from '../LoginModal'
@@ -19,7 +20,9 @@ export const LikeShow: FC = () => {
   const addDisabled = isNaN(parseInt(selected))
 
   const handleSelect: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    setSelected(e.target.value)
+    const value = e.target.value
+    logger.log('set_watch_desire', { value })
+    setSelected(value)
   }
   const handleClose = (): void => {
     setSelected('undefined')
@@ -104,7 +107,9 @@ export const LikeShow: FC = () => {
               loading={loading}
               disabled={addDisabled}
               onClick={() => {
-                handleAddClick().catch((e) => {})
+                handleAddClick().catch((e) => {
+                  logger.error(e)
+                })
               }}
             >
               Agregar

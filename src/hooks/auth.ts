@@ -80,7 +80,7 @@ export const useRedirectToHomepageWhenLogged = (): void => {
 
   useEffect(() => {
     if (userSubstate.userInfo !== null) {
-      logger.log('redirecting_to_homepage_after_login')
+      logger.log('redirecting', { to: '/', from: '/login' })
       navigate('/')
     }
   }, [userSubstate.fetched])
@@ -92,7 +92,7 @@ export const useSignOut = (): (() => Promise<void>) => {
   const location = useLocation()
   const dispatch = useAppDispatch()
   const handleSignOut = async (): Promise<void> => {
-    logger.log('sign_out_user_click')
+    logger.log('sign_out', { action: 'button_click' })
     try {
       await signOut(auth)
       if (pathsToRedirectToHomeAfterSignOut.includes(location.pathname)) {

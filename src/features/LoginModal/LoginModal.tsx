@@ -1,5 +1,6 @@
 import { useAppDispatch } from '@/hooks'
 import { updatePossibleShow } from '@/state'
+import { logger } from '@/utils'
 import { type FC } from 'react'
 import { Button } from 'react-daisyui'
 import { useNavigate } from 'react-router-dom'
@@ -16,6 +17,7 @@ export const LoginModal: FC<LoginModalProps> = ({ checked }) => {
   }
   const handleSignIn = (): void => {
     dispatch(updatePossibleShow(undefined))
+    logger.log('navigate', { to: '/login', action: 'button_click' })
     navigate('/login')
   }
   return (

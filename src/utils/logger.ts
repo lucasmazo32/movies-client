@@ -36,9 +36,13 @@ const logger = {
       return null
     }
   },
-  log: (info = '') => {
+  log: (name: string, info?: Record<string, any>) => {
     if (isLocal) {
-      console.log(`%c[LOG]%c\n${info}`, 'font-weight: 600; color: #357DED;', '')
+      console.log(
+        `%c[LOG]%c\n${name}\n${info ? JSON.stringify(info) : ''}`,
+        'font-weight: 600; color: #357DED;',
+        '',
+      )
       return null
     }
   },

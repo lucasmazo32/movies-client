@@ -32,7 +32,9 @@ export const useAddLikeForShow = (): {
     show: ShowModel,
     showDesire: number,
   ): Promise<boolean> => {
-    logger.log(`add_click_${show.imdbId}`)
+    logger.log(`add_click`, {
+      imdbId: show.imdbId,
+    })
     if (!uid) {
       return false
     }
