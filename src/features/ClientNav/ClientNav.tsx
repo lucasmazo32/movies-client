@@ -22,7 +22,7 @@ export const ClientNav: FC = () => {
           color="primary"
           className="btn-square sm:btn-md btn-sm"
         >
-          <LogoIcon className="fill-base-100" />
+          <LogoIcon className="fill-base-100 h-6 w-6" />
         </Button>
         <Button
           shape="square"
